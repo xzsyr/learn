@@ -1,6 +1,2 @@
-代理方法练习 jdk代理 cglib代理 sfs
-有静态代理吗？
-对，有
-好的
-
-原理如此
+代理代码实现：
+https://blog.csdn.net/u012637358/article/details/80321677
