@@ -17,7 +17,8 @@
 package com.xzsyr.cglibdy.proxy;
 
 /**
- * Title: ICount.java Description: 账号接口
+ * Title: ICount.java 
+ * Description: 账号接口
  * 
  * @author jizhuang.wang
  * @created 2018年5月10日 下午4:36:10
