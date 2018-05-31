@@ -3,6 +3,7 @@ package org.apache.hadoop.contrib.ftp;
 import org.apache.ftpserver.DefaultDataConnectionConfiguration;
 import org.apache.ftpserver.FtpServer;
 import org.apache.ftpserver.interfaces.DataConnectionConfiguration;
+import org.apache.ftpserver.usermanager.DbUserManager;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -108,13 +109,12 @@ public class HdfsOverFtpServer {
 		server.getListener("default").setDataConnectionConfiguration(dataCon);
 		server.getListener("default").setPort(port);
 
-
+        //用户信息管理
 		HdfsUserManager userManager = new HdfsUserManager();
+		DbUserManager dbUserManager=new DbUserManager();
 		final File file = loadResource("/users.properties");
-
 		userManager.setFile(file);
-
-		server.setUserManager(userManager);
+		server.setUserManager(dbUserManager);
 
 		server.setFileSystem(new HdfsFileSystemManager());
 
