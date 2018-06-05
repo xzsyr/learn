@@ -1,9 +1,0 @@
-2018-06-05 13:18:32,294 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.GID = ? 
-2018-06-05 13:18:32,302 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
-2018-06-05 13:18:32,308 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
-2018-06-05 13:18:32,310 INFO (UserController.java:99)- -------user:getUsersByGid---------
-2018-06-05 13:18:36,509 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.GID = ? 
-2018-06-05 13:18:36,511 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
-2018-06-05 13:18:36,514 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
-2018-06-05 13:18:36,516 INFO (UserController.java:99)- -------user:getUsersByGid---------
-2018-06-05 13:20:17,061 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM QRTZ_JOB_DETAILS JOIN QRTZ_TRIGGERS JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_GROUP = QRTZ_TRIGGERS.TRIGGER_GROUP AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP 

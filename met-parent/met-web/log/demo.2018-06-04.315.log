@@ -1,8 +1,0 @@
-2018-06-04 16:29:42,162 INFO (UserController.java:68)- -------user:list---------
-2018-06-04 16:30:37,741 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 10696 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
-2018-06-04 16:30:37,742 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-06-04 16:30:37,742 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-06-04 16:31:01,206 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 13380 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
-2018-06-04 16:31:01,207 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-06-04 16:31:01,207 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-06-04 16:31:04,763 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 3.898 seconds (JVM running for 4.225)

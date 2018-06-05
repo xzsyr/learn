@@ -1,8 +1,0 @@
-2018-06-04 13:47:49,197 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_GROUP(gname, description,isable) values(?,?,?) 
-2018-06-04 13:48:18,584 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 4224 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
-2018-06-04 13:48:18,585 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-06-04 13:48:18,585 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2018-06-04 13:48:19,560 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 1.02 seconds (JVM running for 44.613)
-2018-06-04 13:49:33,426 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 10512 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
-2018-06-04 13:49:33,427 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-06-04 13:49:33,427 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
