@@ -1,0 +1,11 @@
+2018-06-04 15:02:33,520 INFO (GroupController.java:106)- -------group:disable---------
+2018-06-04 15:03:16,746 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_GROUP(GNAME, DESCRIPTION,ISABLE) values(?,?,?) 
+2018-06-04 15:03:16,747 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 研发2组(String), 工作流Activity6.0调研(String), 0(String)
+2018-06-04 15:03:16,776 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 15:03:16,777 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 15:03:16,778 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:03:16,779 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 15:03:16,780 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 15:03:16,780 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:03:16,782 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-06-04 15:03:16,782 INFO (GroupController.java:58)- -------group:save---------

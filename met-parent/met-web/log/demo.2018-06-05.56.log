@@ -1,0 +1,12 @@
+2018-06-05 09:41:27,639 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-05 09:41:28,652 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.GID = ? 
+2018-06-05 09:41:28,655 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-05 09:41:28,658 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-06-05 09:41:28,660 INFO (UserController.java:99)- -------user:getUsersByGid---------
+2018-06-05 09:41:29,114 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.GID = ? 
+2018-06-05 09:41:29,115 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-05 09:41:29,119 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-06-05 09:41:29,120 INFO (UserController.java:99)- -------user:getUsersByGid---------
+2018-06-05 09:42:14,189 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 3544 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-05 09:42:14,190 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-05 09:42:14,190 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

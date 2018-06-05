@@ -1,0 +1,16 @@
+2018-06-01 16:57:10,494 INFO (UserController.java:57)- -------user:list---------
+2018-06-01 16:57:11,203 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-01 16:57:11,203 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-01 16:57:11,204 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-01 16:57:11,204 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 5 
+2018-06-01 16:57:11,205 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-01 16:57:11,206 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-06-01 16:57:11,206 INFO (UserController.java:57)- -------user:list---------
+2018-06-01 16:58:57,518 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-01 16:58:57,518 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-01 16:58:57,519 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-01 16:58:57,519 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 5 
+2018-06-01 16:58:57,520 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-01 16:58:57,520 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-06-01 16:58:57,521 INFO (UserController.java:57)- -------user:list---------
+2018-06-01 16:58:58,199 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 

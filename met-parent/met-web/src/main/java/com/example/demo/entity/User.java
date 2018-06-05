@@ -9,13 +9,15 @@
 
 package com.example.demo.entity;
 
+import javax.persistence.Table;
+
 /**
  * Title: User.java Description: 描述
  * 
  * @author jizhuang.wang
  * @created 2018年5月30日 下午5:11:44
  */
-
+@Table(name="TB_USER")
 public class User {
 	private int UID;
 	private String UNAME;

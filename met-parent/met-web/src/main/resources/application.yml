@@ -1,6 +1,8 @@
 server:
   port: 8080
-
+  profiles:
+    #指定读取配置文件:dev(开发环境),prod(生产环境),qa(测试环境)
+    active: dev
 
 spring:
     datasource:
@@ -44,3 +46,10 @@ pagehelper:
     supportMethodsArguments: true
     params: count=countSql
     returnPageInfo: check
+ 
+  
+#==================== 日志配合·标准  ============================  
+#logging:
+# config: classpath:logback-${spring.profiles.active}.xml
+logging:
+  config: classpath:logback-boot.xml

@@ -12,12 +12,13 @@ package com.example.demo.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.GroupMapper;
 import com.example.demo.dao.UserMapper;
-import com.example.demo.entity.Group;
+import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.User;
 import com.example.demo.service.IUserService;
+import com.example.demo.utils.Dto2Entity;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -27,7 +28,7 @@ import com.github.pagehelper.PageInfo;
  * @author jizhuang.wang       
  * @created 2018年5月30日 下午5:34:29    
  */
-
+@Service
 public class UserServiceImpl implements IUserService{
 
 	@Autowired
@@ -63,6 +64,56 @@ public class UserServiceImpl implements IUserService{
 	public List<User> getUsersByGid(int groupid) {
 		List<User> list = userMapper.getUsersByGid(groupid);
 		return list;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.example.demo.service.IUserService#save(com.example.demo.dto.UserDTO)
+	 */
+	@Override
+	public int save(UserDTO user) {
+		User target = new User();
+		Dto2Entity.copyProperties(user, target);
+		userMapper.insert(target);
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.example.demo.service.IUserService#remove(int)
+	 */
+	@Override
+	public int remove(int uid) {
+		userMapper.delete(uid);
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.example.demo.service.IUserService#edit(com.example.demo.dto.UserDTO)
+	 */
+	@Override
+	public int edit(UserDTO user) {
+		User target = new User();
+		Dto2Entity.copyProperties(user, target);
+		userMapper.update(target);
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.example.demo.service.IUserService#getUserById(int)
+	 */
+	@Override
+	public UserDTO getUserById(int uid) {
+		return userMapper.getUserById(uid);
+	}
+
+	/* (non-Javadoc)
+	 * @see com.example.demo.service.IUserService#getUserDTOs(int, int)
+	 */
+	@Override
+	public PageInfo<UserDTO> getUserDTOs(int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+		List<UserDTO> list = userMapper.getUserDTOs();
+		PageInfo<UserDTO> page = new PageInfo<UserDTO>(list);
+		return page;
 	}
 
 }

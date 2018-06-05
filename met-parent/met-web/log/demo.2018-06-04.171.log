@@ -1,0 +1,12 @@
+2018-06-04 14:36:05,323 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 3.915 seconds (JVM running for 4.236)
+2018-06-04 14:37:11,947 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 14:37:11,967 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:37:11,985 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:37:11,986 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 14:37:11,988 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:37:11,991 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 14:37:11,994 INFO (GroupController.java:46)- -------group:list---------
+2018-06-04 14:37:16,472 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from TB_GROUP where GID=? 
+2018-06-04 14:37:16,474 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 28(Integer)
+2018-06-04 14:37:16,522 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:37:16,523 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 

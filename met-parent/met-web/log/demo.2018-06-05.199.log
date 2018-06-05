@@ -1,0 +1,13 @@
+2018-06-05 12:37:42,916 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-05 12:37:42,918 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-05 12:37:42,919 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-05 12:37:42,920 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-05 12:37:42,920 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-05 12:37:42,921 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-05 12:37:42,922 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-05 12:37:42,922 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-05 12:37:42,923 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-05 12:37:47,612 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.GID = ? 
+2018-06-05 12:37:47,613 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-05 12:37:47,615 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-05 12:37:47,616 INFO (UserController.java:99)- -------user:getUsersByGid---------

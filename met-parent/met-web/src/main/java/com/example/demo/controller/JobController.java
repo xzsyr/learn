@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.quartz.CronScheduleBuilder;
@@ -21,13 +23,21 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.druid.util.StringUtils;
+import com.example.demo.dto.JobDTO;
+import com.example.demo.entity.Group;
 import com.example.demo.entity.JobAndTrigger;
 import com.example.demo.job.BaseJob;
+import com.example.demo.service.IGroupService;
 import com.example.demo.service.IJobAndTriggerService;
+import com.example.demo.service.IUserService;
+import com.example.demo.utils.DateUtils;
+import com.example.demo.utils.QuartzCronDateUtils;
+import com.example.demo.utils.SerialNumberUtils;
 import com.github.pagehelper.PageInfo;
 
 
@@ -37,7 +47,11 @@ public class JobController
 {
     @Autowired
     private IJobAndTriggerService JobAndTriggerService;
-
+    @Autowired
+	private IGroupService groupService;
+    @Autowired
+	private IUserService userService;
+    static String jobClassName = "com.example.demo.job.LoopJob";
     //加入Qulifier注解，通过名称注入bean
     @Autowired 
     @Qualifier("Scheduler")
@@ -45,174 +59,167 @@ public class JobController
     private static SchedulerFactory schedulerFactory = new StdSchedulerFactory();
     private static Logger log = LoggerFactory.getLogger(JobController.class);  
 
-
-    @PostMapping(value="/addjob")
-    public void addjob(@RequestParam(value="jobClassName")String jobClassName, 
-            @RequestParam(value="jobGroupName")String jobGroupName, 
-            @RequestParam(value="jobDescription",required=false)String jobDescription, 
-            @RequestParam(value="dataKey",required=false)String dataKey, 
-            @RequestParam(value="value",required=false)String value, 
-            @RequestParam(value="cronExpression")String cronExpression) throws Exception
-    {     
-    	if(!StringUtils.isEmpty(dataKey))
-    	{
-    		addJob(jobClassName, jobGroupName, cronExpression,jobDescription,dataKey,value);
-    		log.info("addJob:"+jobClassName+"-"+jobGroupName+"###"+dataKey);
-    	}
-    	else{
-    		addJob(jobClassName, jobGroupName, cronExpression,jobDescription);
-    		log.info("addJob:"+jobClassName+"-"+jobGroupName);
-    	}
-    }
-
-      
-    /**     
-     * @discription 在此输入一句话描述作用
-     * @author jizhuang.wang       
-     * @created 2018年5月30日 下午1:37:46     
-     * @param jobClassName
-     * @param jobGroupName
-     * @param cronExpression
-     * @throws Exception     
+    /**
+     * 任务列表
+     * @param pageNum
+     * @param pageSize
+     * @return
      */
-    public void addJob(String jobClassName, String jobGroupName, String cronExpression)throws Exception{
-
-        // 启动调度器  
-        scheduler.start(); 
-
-        //构建job信息
-        JobDetail jobDetail = JobBuilder.newJob(getClass(jobClassName).getClass()).withIdentity(jobClassName, jobGroupName).build();
-
-        //表达式调度构建器(即任务执行的时间)
-        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(cronExpression);
-
-        //按新的cronExpression表达式构建一个新的trigger
-        CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(jobClassName, jobGroupName)
-            .withSchedule(scheduleBuilder).build();
-
-        try {
-            scheduler.scheduleJob(jobDetail, trigger);
-
-        } catch (SchedulerException e) {
-        	log.error("创建定时任务失败"+e);
-            throw new Exception("创建定时任务失败");
+    @GetMapping(value="/queryjob")
+    public Map<String, Object> queryjob(JobDTO jobDto,@RequestParam(value="pageNum")Integer pageNum, @RequestParam(value="pageSize")Integer pageSize) 
+    {           
+        PageInfo<JobAndTrigger> jobAndTrigger = JobAndTriggerService.getJobs(jobDto,pageNum, pageSize);
+        List<JobDTO> jobs = new ArrayList<JobDTO>();
+        PageInfo<Group> groups = groupService.getGroups(1, 100);
+        Map<String, Object> map = new HashMap<String, Object>();
+        JobDTO jb = null;
+        for(JobAndTrigger job:jobAndTrigger.getList()){
+        	jb = new JobDTO();
+        	//任务名称
+        	jb.setJobName(job.getJOB_NAME());
+        	//所属组
+    		Group group = groupService.getGroupById(Integer.parseInt(job.getJOB_GROUP()));
+        	jb.setJobGroupId(job.getJOB_GROUP());
+        	jb.setJobGroupName(null!=group?group.getGNAME():job.getJOB_GROUP());
+        	//组成员
+        	String[] jobName =job.getJOB_NAME().split("_");
+    		int uid = Integer.parseInt(jobName[1]);
+        	jb.setJobUserId(job.getJOB_NAME().split("_")[1]);
+        	jb.setJobUserName(userService.getUserById(uid).getUNAME());
+        	//执行时间
+        	jb.setCronExpression(job.getCRON_EXPRESSION());
+        	//描述
+        	jb.setJobDescription(job.getDESCRIPTION());
+        	//时区
+        	jb.setTimeZoneId(job.getTIME_ZONE_ID());
+        	jb.setTriggerState(job.getTRIGGER_STATE());
+        	jobs.add(jb);
         }
-    }
-      
-    /**     
-     * @discription 在此输入一句话描述作用
-     * @author jizhuang.wang       
-     * @created 2018年5月30日 下午1:37:38     
-     * @param jobClassName
-     * @param jobGroupName
-     * @param cronExpression
-     * @param jobDescription
-     * @throws Exception     
-     */
-    public void addJob(String jobClassName, String jobGroupName, String cronExpression,String jobDescription)throws Exception{
-
-        // 启动调度器  
-        scheduler.start(); 
-
-        //构建job信息
-        JobDetail jobDetail = JobBuilder.newJob(getClass(jobClassName).getClass())
-        		.withIdentity(jobClassName, jobGroupName)
-        		.withDescription(jobDescription)
-        		.build();
-
-        //表达式调度构建器(即任务执行的时间)
-        CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(cronExpression);
-
-        //按新的cronExpression表达式构建一个新的trigger
-        CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(jobClassName, jobGroupName)
-            .withSchedule(scheduleBuilder).build();
-
-        try {
-            scheduler.scheduleJob(jobDetail, trigger);
-
-        } catch (SchedulerException e) {
-            System.out.println("创建定时任务失败"+e);
-            throw new Exception("创建定时任务失败");
-        }
+        map.put("Jobs", jobs);
+        map.put("category", groups.getList());
+        map.put("number", jobAndTrigger.getTotal());
+        return map;
     }
     
+    /**
+     * 添加任务
+     * @param jobGroupName 组名
+     * @param jobUserName 用户名称
+     * @param jobDescription 任务描述
+     * @param cronExpression 任务触发规则
+     * @throws Exception
+     */
+    @PostMapping(value="/addjobExt")
+    public void addjobExt(@RequestParam(value="jobName")String jobName,
+    		@RequestParam(value="jobGroupName")String jobGroupName, 
+            @RequestParam(value="jobUserName")String jobUserName, 
+            @RequestParam(value="jobDescription",required=false)String jobDescription, 
+            @RequestParam(value="cronExpression")String cronExpression) throws Exception
+    {     
+    	 
+    		addJobExt(jobName,jobGroupName, jobUserName,cronExpression,jobDescription);
+    		log.info("addJobExt:"+jobGroupName+"-"+jobUserName);
+    }
+      
       
     /**     
      * @discription 在此输入一句话描述作用
      * @author jizhuang.wang       
      * @created 2018年5月30日 下午1:42:57     
-     * @param jobClassName
      * @param jobGroupName
+     * @param jobUserName
      * @param cronExpression
      * @param jobDescription
      * @param key
      * @param value
      * @throws Exception     
      */
-    public void addJob(String jobClassName, String jobGroupName, String cronExpression,String jobDescription,String dataKey,String value)throws Exception{
-
+    public void addJobExt(String jobName,String jobGroupName, String jobUserName,String cronExpression,String jobDescription)throws Exception{
         // 启动调度器  
         scheduler.start(); 
-
+        //重置任务用户
+        jobName = jobName+"_"+jobUserName+"_"+SerialNumberUtils.Getnum();
+        if(!cronExpression.contains("?")&&!cronExpression.contains("*")){
+        	jobClassName ="com.example.demo.job.SingleJob";
+        	cronExpression = QuartzCronDateUtils.getCron(DateUtils.stringToDate(cronExpression, DateUtils.DATE_TO_STRING_DETAIAL_PATTERN));
+        }
         //构建job信息
         JobDetail jobDetail = JobBuilder.newJob(getClass(jobClassName).getClass())
-        		.withIdentity(jobClassName, jobGroupName)
+        		.withIdentity(jobName,jobGroupName)
         		.withDescription(jobDescription)
-        		.usingJobData(dataKey, value)
         		.build();
-
+        
         //表达式调度构建器(即任务执行的时间)
         CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(cronExpression);
 
         //按新的cronExpression表达式构建一个新的trigger
-        CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(jobClassName, jobGroupName)
+        CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(jobName,jobGroupName)
             .withSchedule(scheduleBuilder).build();
-
         try {
             scheduler.scheduleJob(jobDetail, trigger);
-
         } catch (SchedulerException e) {
             System.out.println("创建定时任务失败"+e);
             throw new Exception("创建定时任务失败");
         }
     }
 
+    /**
+     * 暂停任务
+     * @param jobName
+     * @param jobGroupName
+     * @throws Exception
+     */
     @PostMapping(value="/pausejob")
-    public void pausejob(@RequestParam(value="jobClassName")String jobClassName, @RequestParam(value="jobGroupName")String jobGroupName) throws Exception
+    public void pausejob(@RequestParam(value="jobName")String jobName, 
+    		@RequestParam(value="jobGroupName")String jobGroupName) throws Exception
     {           
-        jobPause(jobClassName, jobGroupName);
+        jobPause(jobName, jobGroupName);
     }
 
-    public void jobPause(String jobClassName, String jobGroupName) throws Exception
+    public void jobPause(String jobName, String jobGroupName) throws Exception
     {   
-        scheduler.pauseJob(JobKey.jobKey(jobClassName, jobGroupName));
+        scheduler.pauseJob(JobKey.jobKey(jobName, jobGroupName));
     }
 
 
+    /**
+     * 恢复任务
+     * @param jobName
+     * @param jobGroupName
+     * @throws Exception
+     */
     @PostMapping(value="/resumejob")
-    public void resumejob(@RequestParam(value="jobClassName")String jobClassName, @RequestParam(value="jobGroupName")String jobGroupName) throws Exception
+    public void resumejob(@RequestParam(value="jobName")String jobName, 
+    		@RequestParam(value="jobGroupName")String jobGroupName) throws Exception
     {           
-        jobresume(jobClassName, jobGroupName);
+        jobresume(jobName, jobGroupName);
     }
 
-    public void jobresume(String jobClassName, String jobGroupName) throws Exception
+    public void jobresume(String jobName, String jobGroupName) throws Exception
     {
-        scheduler.resumeJob(JobKey.jobKey(jobClassName, jobGroupName));
+        scheduler.resumeJob(JobKey.jobKey(jobName, jobGroupName));
     }
 
 
+    /**
+     * 编辑任务
+     * @param jobName
+     * @param jobGroupName
+     * @param cronExpression
+     * @throws Exception
+     */
     @PostMapping(value="/reschedulejob")
-    public void rescheduleJob(@RequestParam(value="jobClassName")String jobClassName, 
+    public void rescheduleJob(@RequestParam(value="jobName")String jobName, 
             @RequestParam(value="jobGroupName")String jobGroupName,
             @RequestParam(value="cronExpression")String cronExpression) throws Exception
     {           
-        jobreschedule(jobClassName, jobGroupName, cronExpression);
+        jobreschedule(jobName, jobGroupName, cronExpression);
     }
 
-    public void jobreschedule(String jobClassName, String jobGroupName, String cronExpression) throws Exception
+    public void jobreschedule(String jobName, String jobGroupName, String cronExpression) throws Exception
     {               
         try {
-            TriggerKey triggerKey = TriggerKey.triggerKey(jobClassName, jobGroupName);
+            TriggerKey triggerKey = TriggerKey.triggerKey(jobName, jobGroupName);
             // 表达式调度构建器
             CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(cronExpression);
 
@@ -229,29 +236,27 @@ public class JobController
         }
     }
 
+    /**
+     * 删除任务
+     * @param jobName
+     * @param jobGroupName
+     * @throws Exception
+     */
     @PostMapping(value="/deletejob")
-    public void deletejob(@RequestParam(value="jobClassName")String jobClassName, @RequestParam(value="jobGroupName")String jobGroupName) throws Exception
+    public void deletejob(@RequestParam(value="jobName")String jobName, 
+    		@RequestParam(value="jobGroupName")String jobGroupName) throws Exception
     {           
-        jobdelete(jobClassName, jobGroupName);
+        jobdelete(jobName, jobGroupName);
     }
 
-    public void jobdelete(String jobClassName, String jobGroupName) throws Exception
+    public void jobdelete(String jobName, String jobGroupName) throws Exception
     {       
-        scheduler.pauseTrigger(TriggerKey.triggerKey(jobClassName, jobGroupName));
-        scheduler.unscheduleJob(TriggerKey.triggerKey(jobClassName, jobGroupName));
-        scheduler.deleteJob(JobKey.jobKey(jobClassName, jobGroupName));             
+        scheduler.pauseTrigger(TriggerKey.triggerKey(jobName, jobGroupName));
+        scheduler.unscheduleJob(TriggerKey.triggerKey(jobName, jobGroupName));
+        scheduler.deleteJob(JobKey.jobKey(jobName, jobGroupName));             
     }
 
-
-    @GetMapping(value="/queryjob")
-    public Map<String, Object> queryjob(@RequestParam(value="pageNum")Integer pageNum, @RequestParam(value="pageSize")Integer pageSize) 
-    {           
-        PageInfo<JobAndTrigger> jobAndTrigger = JobAndTriggerService.getJobAndTriggerDetails(pageNum, pageSize);
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("JobAndTrigger", jobAndTrigger);
-        map.put("number", jobAndTrigger.getTotal());
-        return map;
-    }
+   
     /** 
      *  
      * 功能：启动所有定时任务 

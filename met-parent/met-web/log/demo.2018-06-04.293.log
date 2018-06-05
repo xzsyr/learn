@@ -1,0 +1,16 @@
+2018-06-04 16:01:04,010 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:01:04,013 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_USER set GID=?, UNAME=?, EMPNUM=?, ISABLE=? WHERE UID=? 
+2018-06-04 16:01:04,013 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long), 张三(String), 001(String), 0(String), 1(Integer)
+2018-06-04 16:01:04,062 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 16:01:04,063 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-04 16:01:04,063 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:01:04,064 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:01:04,064 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 100 
+2018-06-04 16:01:04,065 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:01:04,067 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 16:01:04,068 INFO (UserController.java:118)- -------user:enable---------
+2018-06-04 16:01:04,323 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-04 16:01:04,325 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-04 16:01:04,327 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:01:04,327 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_USER set GID=?, UNAME=?, EMPNUM=?, ISABLE=? WHERE UID=? 
+2018-06-04 16:01:04,328 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long), 张三(String), 001(String), 1(String), 1(Integer)

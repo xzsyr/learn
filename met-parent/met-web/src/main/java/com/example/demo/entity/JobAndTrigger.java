@@ -14,6 +14,7 @@ public class JobAndTrigger {
 	private String TIME_ZONE_ID;
 	private String DESCRIPTION;//任务描述信息description
 	private Object JOB_DATA;//任务数据
+	private String TRIGGER_STATE;
 	
 	public String getJOB_NAME() {
 		return JOB_NAME;
@@ -81,4 +82,11 @@ public class JobAndTrigger {
 	public void setJOB_DATA(Object jOB_DATA) {
 		JOB_DATA = jOB_DATA;
 	}
+	public String getTRIGGER_STATE() {
+		return TRIGGER_STATE;
+	}
+	public void setTRIGGER_STATE(String tRIGGER_STATE) {
+		TRIGGER_STATE = tRIGGER_STATE;
+	}
+	
 }

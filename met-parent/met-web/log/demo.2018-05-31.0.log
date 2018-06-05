@@ -1,0 +1,11 @@
+2018-05-31 17:44:33,262 INFO (StartupInfoLogger.java:48)- Starting test on Stronger-PC with PID 19224 (started by Stronger in F:\Learn\met-parent\met-web)
+2018-05-31 17:44:33,263 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-05-31 17:44:33,263 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-05-31 17:44:36,811 INFO (StartupInfoLogger.java:57)- Started test in 3.954 seconds (JVM running for 4.504)
+2018-05-31 17:44:36,901 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-05-31 17:44:36,916 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-05-31 17:44:36,931 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-05-31 17:44:36,932 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-05-31 17:44:36,932 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-05-31 17:44:36,934 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-05-31 17:44:36,940 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_HISJOB 

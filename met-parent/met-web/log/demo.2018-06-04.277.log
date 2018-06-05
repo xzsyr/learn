@@ -1,0 +1,15 @@
+2018-06-04 15:55:25,306 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 0.893 seconds (JVM running for 602.757)
+2018-06-04 15:55:31,081 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 13284 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 15:55:31,082 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 15:55:31,082 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-04 15:55:34,632 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 3.895 seconds (JVM running for 4.232)
+2018-06-04 15:55:40,515 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-04 15:55:40,526 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:55:40,539 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 15:55:40,541 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 5 
+2018-06-04 15:55:40,541 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:55:40,544 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 15:55:40,545 INFO (UserController.java:59)- -------user:list---------
+2018-06-04 15:56:09,811 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 13284 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 15:56:09,812 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 15:56:09,812 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

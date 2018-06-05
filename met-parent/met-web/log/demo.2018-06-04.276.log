@@ -1,0 +1,16 @@
+2018-06-04 15:54:23,187 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:54:23,196 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 15:54:23,197 INFO (UserController.java:104)- -------user:edit---------
+2018-06-04 15:54:28,783 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_USER set GID=?, EMPNUM=? WHERE UID=? 
+2018-06-04 15:54:28,786 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Long), 001(String), 1(Integer)
+2018-06-04 15:54:28,820 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 15:54:28,822 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-04 15:54:28,823 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:54:28,826 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 15:54:28,827 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 100 
+2018-06-04 15:54:28,828 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:54:28,831 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 15:54:28,833 INFO (UserController.java:104)- -------user:edit---------
+2018-06-04 15:55:24,448 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 9340 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 15:55:24,448 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 15:55:24,448 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

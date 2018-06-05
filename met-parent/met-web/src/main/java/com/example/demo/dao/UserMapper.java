@@ -11,6 +11,7 @@ package com.example.demo.dao;
 
 import java.util.List;
 
+import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.User;
 
 /**        
@@ -23,4 +24,25 @@ import com.example.demo.entity.User;
 public interface UserMapper {
 	public List<User> getUsers();
 	public List<User> getUsersByGid(int groupid);
+	/**
+	 * @param target
+	 */
+	public void insert(User target);
+	/**
+	 * @param uid
+	 */
+	public void delete(int uid);
+	/**
+	 * @param target
+	 */
+	public void update(User target);
+	/**
+	 * @param uid
+	 * @return
+	 */
+	public UserDTO getUserById(int uid);
+	/**
+	 * @return
+	 */
+	public List<UserDTO> getUserDTOs();
 }

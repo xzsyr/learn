@@ -11,7 +11,9 @@ package com.example.demo.dao;
 
 import java.util.List;
 
+import com.example.demo.dto.GroupDTO;
 import com.example.demo.entity.Group;
+
 
 
 /**        
@@ -23,4 +25,25 @@ import com.example.demo.entity.Group;
 
 public interface GroupMapper {
 	public List<Group> getGroups();
+
+	/**
+	 * @param target
+	 */
+	public void insert(Group target);
+
+	/**
+	 * @param gid
+	 */
+	public void delete(int gid);
+
+	/**
+	 * @param target
+	 */
+	public void update(Group target);
+
+	/**
+	 * @param gid
+	 * @return
+	 */
+	public GroupDTO getGroupByKey(int gid);
 }

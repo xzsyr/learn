@@ -1,0 +1,18 @@
+2018-06-04 14:15:02,186 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 1.02 seconds (JVM running for 279.765)
+2018-06-04 14:15:13,723 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 7276 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 14:15:13,724 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 14:15:13,724 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-04 14:15:17,251 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 3.856 seconds (JVM running for 4.18)
+2018-06-04 14:15:35,077 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 14:15:35,089 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:15:35,100 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:15:35,102 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 14:15:35,102 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:15:35,105 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 7
+2018-06-04 14:15:35,106 INFO (GroupController.java:46)- -------group:list---------
+2018-06-04 14:16:09,110 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 7276 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 14:16:09,110 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 14:16:09,110 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-04 14:16:12,338 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 5768 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 14:16:12,338 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 14:16:12,338 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

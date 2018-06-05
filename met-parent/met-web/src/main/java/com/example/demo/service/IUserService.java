@@ -11,6 +11,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.User;
 import com.github.pagehelper.PageInfo;
 
@@ -23,5 +24,26 @@ import com.github.pagehelper.PageInfo;
 
 public interface IUserService {
 	public PageInfo<User> getUsers(int pageNum, int pageSize);
+	public PageInfo<UserDTO> getUserDTOs(int pageNum, int pageSize);
 	public List<User> getUsersByGid(int groupid);
+	/**
+	 * @param user
+	 * @return
+	 */
+	public int save(UserDTO user);
+	/**
+	 * @param uid
+	 * @return
+	 */
+	public int remove(int uid);
+	/**
+	 * @param user
+	 * @return
+	 */
+	public int edit(UserDTO user);
+	/**
+	 * @param gid
+	 * @return
+	 */
+	public UserDTO getUserById(int gid);
 }

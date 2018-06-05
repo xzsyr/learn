@@ -1,0 +1,11 @@
+2018-06-04 14:32:00,269 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(String), 2(String), 0(String)
+2018-06-04 14:32:00,473 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:32:00,474 INFO (GroupController.java:56)- -------group:save---------
+2018-06-04 14:32:19,085 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_GROUP(GNAME, DESCRIPTION,ISABLE) values(?,?,?) 
+2018-06-04 14:32:19,088 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(String), 32(String), 0(String)
+2018-06-04 14:32:19,158 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:32:19,158 INFO (GroupController.java:56)- -------group:save---------
+2018-06-04 14:32:28,366 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_GROUP(GNAME, DESCRIPTION,ISABLE) values(?,?,?) 
+2018-06-04 14:32:28,367 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: (String), (String), 0(String)
+2018-06-04 14:32:28,435 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:32:28,437 INFO (GroupController.java:56)- -------group:save---------

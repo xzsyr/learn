@@ -1,0 +1,12 @@
+2018-06-04 14:37:18,135 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: delete from TB_GROUP where GID=? 
+2018-06-04 14:37:18,142 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 26(Integer)
+2018-06-04 14:37:18,220 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:37:18,223 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 14:37:18,224 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:37:18,228 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:37:18,229 INFO (GroupController.java:67)- -------group:remove---------
+2018-06-04 14:37:22,277 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_GROUP(GNAME, DESCRIPTION,ISABLE) values(?,?,?) 
+2018-06-04 14:37:22,279 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 234(String), 23423(String), 0(String)
+2018-06-04 14:37:22,302 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:37:22,302 INFO (GroupController.java:56)- -------group:save---------
+2018-06-04 14:38:15,364 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 

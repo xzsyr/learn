@@ -1,0 +1,12 @@
+2018-06-04 16:26:45,723 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 3.753 seconds (JVM running for 4.076)
+2018-06-04 16:26:53,903 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-04 16:26:53,915 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:26:53,929 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:26:53,930 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 5 
+2018-06-04 16:26:53,931 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:26:53,933 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 16:26:53,935 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 16:26:53,935 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:26:53,936 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:26:53,937 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 16:26:53,937 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 

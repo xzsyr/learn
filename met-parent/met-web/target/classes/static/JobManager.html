@@ -211,7 +211,7 @@
 				loadData: function(pageNum, pageSize){					
 					this.$http.get('job/queryjob?' + 'pageNum=' +  pageNum + '&pageSize=' + pageSize).then(function(res){
 						console.log(res)
-                		this.tableData = res.body.JobAndTrigger.list;
+                		this.tableData = res.body.Jobs.list;
                 		this.totalCount = res.body.number;
                 	},function(){
                   		console.log('failed');

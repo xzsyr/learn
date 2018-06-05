@@ -9,6 +9,7 @@
 
 package com.example.demo.service;
 
+import com.example.demo.dto.GroupDTO;
 import com.example.demo.entity.Group;
 import com.github.pagehelper.PageInfo;
 
@@ -21,4 +22,28 @@ import com.github.pagehelper.PageInfo;
 
 public interface IGroupService {
 	public PageInfo<Group> getGroups(int pageNum, int pageSize);
+
+	/**
+	 * @param group
+	 * @return
+	 */
+	public int save(GroupDTO group);
+
+	/**
+	 * @param gid
+	 * @return
+	 */
+	public int remove(int gid);
+	
+	/**
+	 * @param gid
+	 * @return
+	 */
+	public int edit(GroupDTO group);
+
+	/**
+	 * @param gid
+	 * @return
+	 */
+	public GroupDTO getGroupById(int gid);
 }

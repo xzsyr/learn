@@ -1,0 +1,12 @@
+2018-06-04 14:59:32,277 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 研发1组(String), 微信小程序调研工作(String), 1(String), 37(Integer)
+2018-06-04 14:59:32,343 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:59:32,346 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 14:59:32,347 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:59:32,348 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:59:32,349 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 14:59:32,349 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:59:32,351 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:59:32,352 INFO (GroupController.java:106)- -------group:disable---------
+2018-06-04 14:59:33,474 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-04 14:59:33,475 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-04 14:59:33,477 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

@@ -1,0 +1,13 @@
+2018-06-04 15:05:52,932 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 15:05:52,934 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:05:52,936 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 15:05:52,936 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 15:05:52,937 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 15:05:52,938 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 15:05:52,938 INFO (GroupController.java:46)- -------group:list---------
+2018-06-04 15:06:02,631 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-04 15:06:02,633 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-04 15:06:02,635 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 15:06:02,637 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_GROUP set GNAME=?, DESCRIPTION=?, ISABLE=? WHERE GID=? 
+2018-06-04 15:06:02,638 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 研发3组(String), 协同办工-待办任务工作模式调研(String), 1(String), 40(Integer)
+2018-06-04 15:06:02,755 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1

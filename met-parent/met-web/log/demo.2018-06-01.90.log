@@ -1,0 +1,11 @@
+2018-06-01 16:45:01,295 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 1.077 seconds (JVM running for 8019.101)
+2018-06-01 16:46:09,846 INFO (StartupInfoLogger.java:48)- Starting test on Stronger-PC with PID 11680 (started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-01 16:46:09,847 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-01 16:46:09,847 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-01 16:46:13,068 INFO (StartupInfoLogger.java:57)- Started test in 3.577 seconds (JVM running for 4.203)
+2018-06-01 16:46:13,160 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER 
+2018-06-01 16:46:13,174 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-01 16:46:13,189 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-01 16:46:13,191 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_USER LIMIT 100 
+2018-06-01 16:46:13,191 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-01 16:46:13,194 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2

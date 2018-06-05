@@ -1,0 +1,16 @@
+2018-06-04 14:59:41,248 INFO (GroupController.java:106)- -------group:disable---------
+2018-06-04 14:59:41,541 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-04 14:59:41,543 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-04 14:59:41,548 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:59:41,550 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_GROUP set GNAME=?, DESCRIPTION=?, ISABLE=? WHERE GID=? 
+2018-06-04 14:59:41,552 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 研发1组(String), 微信小程序调研工作(String), 0(String), 37(Integer)
+2018-06-04 14:59:41,597 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 14:59:41,599 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 14:59:41,599 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:59:41,600 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:59:41,601 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 14:59:41,601 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:59:41,602 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:59:41,603 INFO (GroupController.java:93)- -------group:enable---------
+2018-06-04 14:59:41,848 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-04 14:59:41,849 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)

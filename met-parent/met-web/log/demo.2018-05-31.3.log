@@ -1,0 +1,7 @@
+2018-05-31 17:55:40,519 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-05-31 17:55:40,525 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.GID = ? 
+2018-05-31 17:55:40,526 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-05-31 17:55:40,529 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-05-31 17:55:40,534 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_HISJOB(JOB_NAME, JOB_GROUP,JOB_CLASS_NAME,DESCRIPTION) values(?,?,?,?) 
+2018-05-31 17:55:40,535 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 你好(String), #####(String), aaa(String), aa(String)
+2018-05-31 17:55:40,622 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1

@@ -1,0 +1,10 @@
+2018-06-04 17:05:46,643 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: insert into TB_USER(UNAME,EMPNUM,ISABLE,GID) values(?,?,?,?) 
+2018-06-04 17:05:46,650 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 姜立鑫(String), 0005(String), null, 41(Long)
+2018-06-04 17:05:46,687 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-04 17:05:46,689 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-04 17:05:46,689 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 17:05:46,690 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 17:05:46,691 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME,g.DESCRIPTION FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 100 
+2018-06-04 17:05:46,691 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 17:05:46,692 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+2018-06-04 17:05:46,692 INFO (UserController.java:107)- -------user:save---------

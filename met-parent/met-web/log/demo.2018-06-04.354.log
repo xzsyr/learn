@@ -1,0 +1,24 @@
+2018-06-04 16:53:39,351 INFO (UserController.java:84)- -------user:listdto---------
+2018-06-04 16:53:40,323 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-04 16:53:40,324 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,325 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:53:40,325 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 5 
+2018-06-04 16:53:40,325 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,327 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-04 16:53:40,328 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 16:53:40,328 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,329 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:53:40,330 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 16:53:40,330 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,331 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 3
+2018-06-04 16:53:40,331 INFO (UserController.java:84)- -------user:listdto---------
+2018-06-04 16:53:40,891 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-04 16:53:40,891 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,893 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:53:40,893 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 5 
+2018-06-04 16:53:40,894 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,895 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-04 16:53:40,895 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 16:53:40,896 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 16:53:40,897 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 16:53:40,897 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 

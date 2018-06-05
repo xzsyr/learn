@@ -1,0 +1,12 @@
+2018-06-04 14:09:48,973 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 1.044 seconds (JVM running for 663.013)
+2018-06-04 14:10:23,075 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 6504 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-04 14:10:23,076 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-04 14:10:23,077 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-04 14:10:26,748 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 4.023 seconds (JVM running for 4.341)
+2018-06-04 14:10:31,702 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 14:10:31,716 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:10:31,728 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 14:10:31,729 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 14:10:31,730 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 14:10:31,733 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 7
+2018-06-04 14:10:31,734 INFO (GroupController.java:46)- -------group:list---------

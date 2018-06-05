@@ -1,0 +1,14 @@
+2018-06-05 12:40:44,240 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-05 12:40:44,242 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-05 12:40:44,243 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-05 12:40:44,243 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-05 12:40:44,244 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-05 12:40:44,245 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-05 12:40:44,245 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-05 12:40:44,246 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-05 12:40:44,247 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-05 12:40:44,247 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-05 12:40:44,249 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-05 12:42:08,265 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 4380 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-05 12:42:08,266 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-05 12:42:08,266 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

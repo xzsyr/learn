@@ -1,0 +1,12 @@
+2018-06-04 09:50:40,099 INFO (GroupController.java:48)- -------group:list---------
+2018-06-04 09:51:44,051 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 09:51:44,051 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 09:51:44,052 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 09:51:44,052 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-04 09:51:44,053 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 09:51:44,053 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-04 09:51:44,054 INFO (GroupController.java:48)- -------group:list---------
+2018-06-04 09:52:07,395 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-04 09:52:07,396 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-04 09:52:07,397 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-04 09:52:07,398 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
