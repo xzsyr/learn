@@ -1,0 +1,15 @@
+2018-06-05 17:37:00,030 INFO (LoopJob.java:27)- 测试2
+2018-06-05 17:37:00,035 INFO (LoopJob.java:28)- 40
+2018-06-05 17:37:00,035 ERROR (LoopJob.java:29)- Hello Job执行时间: Tue Jun 05 17:37:00 CST 2018
+2018-06-05 17:37:06,049 INFO (LoopJob.java:27)- 测试2
+2018-06-05 17:37:06,050 INFO (LoopJob.java:28)- 40
+2018-06-05 17:37:06,050 ERROR (LoopJob.java:29)- Hello Job执行时间: Tue Jun 05 17:37:06 CST 2018
+2018-06-05 17:37:12,063 INFO (LoopJob.java:27)- 测试2
+2018-06-05 17:37:12,063 INFO (LoopJob.java:28)- 40
+2018-06-05 17:37:12,064 ERROR (LoopJob.java:29)- Hello Job执行时间: Tue Jun 05 17:37:12 CST 2018
+2018-06-05 17:37:18,044 INFO (LoopJob.java:27)- 测试2
+2018-06-05 17:37:18,044 INFO (LoopJob.java:28)- 40
+2018-06-05 17:37:18,045 ERROR (LoopJob.java:29)- Hello Job执行时间: Tue Jun 05 17:37:18 CST 2018
+2018-06-05 17:37:24,081 INFO (LoopJob.java:27)- 测试2
+2018-06-05 17:37:24,083 INFO (LoopJob.java:28)- 40
+2018-06-05 17:37:24,083 ERROR (LoopJob.java:29)- Hello Job执行时间: Tue Jun 05 17:37:24 CST 2018

@@ -1,0 +1,8 @@
+2018-06-06 09:15:08,865 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 0.88 seconds (JVM running for 4842.769)
+2018-06-06 09:15:25,895 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 4316 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-06 09:15:25,895 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-06 09:15:25,895 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-06 09:15:26,677 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 0.812 seconds (JVM running for 4860.581)
+2018-06-06 09:15:42,672 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 4316 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-06 09:15:42,672 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-06 09:15:42,672 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

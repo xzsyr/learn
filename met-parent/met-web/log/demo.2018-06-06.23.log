@@ -1,0 +1,25 @@
+2018-06-06 07:59:04,002 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-06 07:59:04,007 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-06 07:59:04,010 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:04,012 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_GROUP set GNAME=?, DESCRIPTION=?, ISABLE=? WHERE GID=? 
+2018-06-06 07:59:04,013 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 研发1组(String), 微信小程序调研工作(String), 1(String), 37(Integer)
+2018-06-06 07:59:04,038 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-06 07:59:04,039 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-06 07:59:04,039 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:59:04,040 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:04,041 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-06 07:59:04,041 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:59:04,042 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-06 07:59:04,042 INFO (GroupController.java:106)- -------group:disable---------
+2018-06-06 07:59:04,569 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-06 07:59:04,571 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-06 07:59:04,574 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:04,576 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_GROUP set GNAME=?, DESCRIPTION=?, ISABLE=? WHERE GID=? 
+2018-06-06 07:59:04,577 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 研发1组(String), 微信小程序调研工作(String), 0(String), 37(Integer)
+2018-06-06 07:59:04,654 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-06 07:59:04,655 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-06 07:59:04,655 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:59:04,656 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:04,657 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-06 07:59:04,657 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:59:04,658 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4

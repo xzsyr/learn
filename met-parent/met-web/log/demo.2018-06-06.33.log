@@ -1,0 +1,13 @@
+2018-06-06 07:59:19,013 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_HISJOB 
+2018-06-06 07:59:19,015 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:59:19,016 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:19,017 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_HISJOB LIMIT 5 
+2018-06-06 07:59:19,017 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:59:19,018 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:19,018 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-06 07:59:19,019 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-06 07:59:19,020 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:59:19,021 INFO (HisJobController.java:51)- -------hisJobs:list---------
+2018-06-06 08:02:52,097 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM QRTZ_JOB_DETAILS JOIN QRTZ_TRIGGERS JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_NAME = QRTZ_TRIGGERS.JOB_NAME AND QRTZ_TRIGGERS.TRIGGER_NAME = QRTZ_CRON_TRIGGERS.TRIGGER_NAME AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP WHERE 1 = 1 
+2018-06-06 08:02:52,098 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 08:02:52,099 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

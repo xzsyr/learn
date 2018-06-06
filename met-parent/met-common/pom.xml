@@ -22,5 +22,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+	    <groupId>com.ganshane.specs</groupId>
+	    <artifactId>taobao-sdk</artifactId>
+	    <version>20120515</version>
+	</dependency>
+    
   </dependencies>
 </project>

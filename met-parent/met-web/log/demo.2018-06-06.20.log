@@ -1,0 +1,10 @@
+2018-06-06 07:57:02,457 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_USER set GID=?, UNAME=?, EMPNUM=?, ISABLE=? WHERE UID=? 
+2018-06-06 07:57:02,462 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Long), 王吉壮(String), 0003(String), 1(String), 2(Integer)
+2018-06-06 07:57:02,498 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-06 07:57:02,501 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-06 07:57:02,502 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:57:02,505 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:57:02,506 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME,g.DESCRIPTION FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 100 
+2018-06-06 07:57:02,507 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:57:02,512 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+2018-06-06 07:57:02,513 INFO (UserController.java:159)- -------user:disable---------
