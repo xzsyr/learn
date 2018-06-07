@@ -40,16 +40,16 @@ public class MyFilter extends ZuulFilter{
 
 	@Override
 	public boolean shouldFilter() {
-		 return true;
+		 return false;// 是否执行该过滤器，此处为true，说明需要过滤  
 	}
 
 	@Override
 	public int filterOrder() {
-		return 0;
+		return 0;// 优先级为0，数字越大，优先级越低  
 	}
 
 	@Override
 	public String filterType() {
-		  return "pre";  
+		  return "pre";  // 前置过滤器  
 	}
 }
