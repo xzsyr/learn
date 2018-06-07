@@ -59,5 +59,8 @@
     <module>craft-employ</module>
     <module>craft-worker</module>
     <module>craft-config-server</module>
+    <module>craft-eureka-server-ha</module>
+    <module>craft-zuul-server</module>
+    <module>craft-zipkin-server</module>
   </modules>
 </project>
