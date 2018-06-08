@@ -1,0 +1,23 @@
+2018-06-08 09:37:16,778 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:16,781 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-08 09:37:16,781 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-08 09:37:16,782 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:16,783 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-08 09:37:16,783 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-08 09:37:16,784 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:16,784 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-08 09:37:16,784 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-08 09:37:16,785 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:17,246 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_HISJOB 
+2018-06-08 09:37:17,247 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-08 09:37:17,248 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:17,248 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_HISJOB LIMIT 5 
+2018-06-08 09:37:17,248 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-08 09:37:17,249 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2018-06-08 09:37:17,250 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-08 09:37:17,250 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-08 09:37:17,251 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:17,252 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-08 09:37:17,252 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-08 09:37:17,253 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:37:17,253 INFO (HisJobController.java:51)- -------hisJobs:list---------

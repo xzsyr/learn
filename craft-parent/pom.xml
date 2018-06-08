@@ -62,5 +62,9 @@
     <module>craft-eureka-server-ha</module>
     <module>craft-zuul-server</module>
     <module>craft-zipkin-server</module>
+    <module>craft-voice</module>
+    <module>craft-agent</module>
+    <module>craft-chat</module>
+    <module>craft-contract</module>
   </modules>
 </project>

@@ -1075,6 +1075,7 @@
 	            },
                 success:function(res){
                 	_self.rows=res.Jobs;
+                	location.reload()
                 },
                 error:function(e){
                    console.log("--------启动任务信息失败---------");
@@ -1094,6 +1095,7 @@
                 },
                 success:function(res){
                 	_self.rows=res.Jobs;
+                	location.reload()
                 },
                 error:function(e){
                    console.log("--------禁用组信息失败---------");
@@ -1117,6 +1119,7 @@
                 },
                 success:function(res){
                 	_self.rows=res.Jobs;
+                	location.reload()
                 },
                 error:function(e){
                    console.log("--------更新组信息失败---------");
