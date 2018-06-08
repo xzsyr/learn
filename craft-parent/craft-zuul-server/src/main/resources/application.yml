@@ -16,3 +16,6 @@ zuul:
     employ:
       path: /employ/**
       serviceId: craft-employ-server
+  retryable: true
+  MaxAutoRetries: 2
+  MaxAutoRetriesNextServer: 0
