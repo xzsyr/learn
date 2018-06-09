@@ -14,6 +14,8 @@
 	 craft-zuul-server  网管路由服务
 	 craft-zipkin-server 链路追踪服务
      craft-cas-server  统一认证中心服务
+## 部署说明
+
      
 ## 项目技术架构
    springcloud 
@@ -25,7 +27,7 @@
     rabbitmq
     github
     mysql5.6+
-3、业务模块功能
+## 业务模块功能
   3.1 craft-employ 雇主模块
       注册/登录认证
       我的需求

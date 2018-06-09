@@ -66,5 +66,6 @@
     <module>craft-agent</module>
     <module>craft-chat</module>
     <module>craft-contract</module>
+    <module>craft-common</module>
   </modules>
 </project>
