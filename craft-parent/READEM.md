@@ -1,5 +1,5 @@
-1、项目业务架构
-   craft-parent
+## 项目业务架构
+     craft-parent
      ###########业务层面###########
 	 craft-employ 雇主模块
 	 craft-worker 被雇佣者模块
@@ -15,7 +15,7 @@
 	 craft-zipkin-server 链路追踪服务
      craft-cas-server  统一认证中心服务
      
-2、项目技术架构
+## 项目技术架构
    springcloud 
        应用组件：
     springboot1.5.9
