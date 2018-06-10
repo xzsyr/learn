@@ -67,5 +67,7 @@
     <module>craft-chat</module>
     <module>craft-contract</module>
     <module>craft-common</module>
+    <module>craft-shiro-cas</module>
+    <module>craft-core</module>
   </modules>
 </project>
