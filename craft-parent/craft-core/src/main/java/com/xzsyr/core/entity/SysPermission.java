@@ -125,5 +125,17 @@ public class SysPermission {
 	public void setAvailable(Boolean available) {
 		this.available = available;
 	}
+	/**
+	 * @return the roles
+	 */
+	public List<SysRole> getRoles() {
+		return roles;
+	}
+	/**
+	 * @param roles the roles to set
+	 */
+	public void setRoles(List<SysRole> roles) {
+		this.roles = roles;
+	}
 	
 }
