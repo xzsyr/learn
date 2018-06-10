@@ -7,7 +7,11 @@
 	 craft-void   手艺人之声论坛
 	 craft-chat   闲谈（朋友圈）
 	 craft-contract 契约
+	 ###########core#############
 	 craft-common 公共模块
+	 craft-core 数据库durid配置
+	 craft-shiro-cas client
+	 
 	 ###########架构层面###########
 	 craft-enreka-server 注册中心服务（HA）
 	 craft-config-server 配置中心服务

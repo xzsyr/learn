@@ -6,20 +6,16 @@
 * @date 2018年6月10日  
 * @version V1.0  
 */ 
-package com.xzsyr.employ.config;
+package com.xzsyr.worker.config;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import javax.annotation.Resource;
 import javax.servlet.Filter;
 
-import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.cas.CasFilter;
 import org.apache.shiro.cas.CasSubjectFactory;
-import org.apache.shiro.session.mgt.SessionManager;
-import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -36,10 +32,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
-import com.xzsyr.shirocas.cache.RedisCacheManager;
 import com.xzsyr.shirocas.reaml.MyShiroRealm;
-import com.xzsyr.shirocas.session.MySessionManager;
-import com.xzsyr.shirocas.session.RedisSessionDAO;
 
 /**  
 * @ClassName: ShiroConfiguration  
@@ -69,34 +62,17 @@ public class ShiroConfiguration {
 //    public static final String loginSuccessUrl = "/index";
     // 权限认证失败跳转地址
     public static final String unauthorizedUrl = "/error/403.html";
-    @Resource
-    private RedisSessionDAO sessionDAO;
     
-    //自定义sessionManager  
-    @Bean  
-    public SessionManager sessionManager() {  
-    	MySessionManager mySessionManager = new MySessionManager();  
-    	mySessionManager.setSessionDAO(sessionDAO);  
-    	return mySessionManager;  
-    }  
-    @Bean
-    public RedisCacheManager redisCacheManager() {
-        return new RedisCacheManager();
-    }
-    
-	/**
+    /**
      * 实例化SecurityManager，该类是shiro的核心类
      * @return
      */
-    @Bean
+	@Bean
     public DefaultWebSecurityManager securityManager() {
     	DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         securityManager.setRealm(myShiroCasRealm());
-         // 自定义session管理 使用redis  
-        securityManager.setSessionManager(sessionManager());  
-         //<!-- 用户授权/认证信息Cache, 采用EhCache 缓存 -->
-        //securityManager.setCacheManager(getEhCacheManager());
-        securityManager.setCacheManager(redisCacheManager());
+//      <!-- 用户授权/认证信息Cache, 采用EhCache 缓存 -->
+        securityManager.setCacheManager(getEhCacheManager());
         // 指定 SubjectFactory,如果要实现cas的remember me的功能，需要用到下面这个CasSubjectFactory，并设置到securityManager的subjectFactory中
         securityManager.setSubjectFactory(new CasSubjectFactory());
         return securityManager;
@@ -113,20 +89,6 @@ public class ShiroConfiguration {
         return em;
     }
 
-    /**  
-     * 凭证匹配器  
-     * （由于我们的密码校验交给Shiro的SimpleAuthenticationInfo进行处理了  
-     * ）  
-     *  
-     * @return  
-     */  
-    @Bean  
-    public HashedCredentialsMatcher hashedCredentialsMatcher() {  
-        HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();  
-        hashedCredentialsMatcher.setHashAlgorithmName("md5");//散列算法:这里使用MD5算法;  
-        hashedCredentialsMatcher.setHashIterations(2);//散列的次数，比如散列两次，相当于 md5(md5(""));  
-        return hashedCredentialsMatcher;  
-    } 
     /**
      * 配置Realm，由于我们使用的是CasRealm，所以已经集成了单点登录的功能
      * @param cacheManager
@@ -139,11 +101,11 @@ public class ShiroConfiguration {
         realm.setCasServerUrlPrefix(ShiroConfiguration.casServerUrlPrefix);
         // 客户端回调地址，登录成功后的跳转地址(自己的服务地址)
         realm.setCasService(ShiroConfiguration.shiroServerUrlPrefix + ShiroConfiguration.casFilterUrlPattern);
-        realm.setCredentialsMatcher(hashedCredentialsMatcher());  
         // 登录成功后的默认角色，此处默认为user角色
         realm.setDefaultRoles("user");
         return realm;
     }
+
     /**
      * 注册单点登出的listener
      * @return
