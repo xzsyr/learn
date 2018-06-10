@@ -33,6 +33,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+        <dependency>
+	        <groupId>com.xzsyr</groupId>
+	        <artifactId>craft-shiro-cas</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+	        <groupId>com.xzsyr</groupId>
+	        <artifactId>craft-common</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+        </dependency>
   </dependencies>
   <build>
     <finalName>craft-employ</finalName>

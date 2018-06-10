@@ -4,6 +4,15 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="craft-shiro-cas-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-shiro-cas/craft-shiro-cas">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="craft-core-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-core/craft-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="craft-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-common/craft-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="craft-employ"/>
         <property name="java-output-path" value="/craft-employ/target/classes"/>
     </wb-module>
