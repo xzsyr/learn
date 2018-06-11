@@ -7,9 +7,9 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-agent</artifactId>
+  <artifactId>craft-module-agent</artifactId>
   <packaging>war</packaging>
-  <name>craft-agent Maven Webapp</name>
+  <name>craft-module-agent Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -35,6 +35,6 @@
         </dependency>
   </dependencies>
   <build>
-    <finalName>craft-agent</finalName>
+    <finalName>craft-module-agent</finalName>
   </build>
 </project>

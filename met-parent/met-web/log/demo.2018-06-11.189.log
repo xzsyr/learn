@@ -1,0 +1,23 @@
+2018-06-11 10:45:40,654 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:45:40,656 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:45:40,657 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-11 10:45:40,657 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:45:40,658 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-11 10:45:40,659 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:45:40,659 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 10:45:40,660 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:45:40,660 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:45:40,661 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:45:40,661 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:45:40,662 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:45:40,662 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 10:45:40,663 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:45:40,663 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:45:40,663 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 10:45:40,664 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:45:40,665 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:45:40,665 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 10:45:40,666 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:45:40,666 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:45:40,666 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:45:40,667 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

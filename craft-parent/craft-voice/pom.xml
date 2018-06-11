@@ -7,9 +7,9 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-voice</artifactId>
+  <artifactId>craft-module-voice</artifactId>
   <packaging>war</packaging>
-  <name>craft-voice Maven Webapp</name>
+  <name>craft-module-voice Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -35,6 +35,6 @@
         </dependency>
   </dependencies>
   <build>
-    <finalName>craft-voice</finalName>
+    <finalName>craft-module-voice</finalName>
   </build>
 </project>

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="craft-employ">
+    <wb-module deploy-name="craft-module-employ">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="craft-shiro-cas-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-shiro-cas/craft-shiro-cas">
+        <dependent-module archiveName="craft-module-core-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-module-core/craft-module-core">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="craft-core-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-core/craft-core">
+        <dependent-module archiveName="craft-module-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-module-common/craft-module-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="craft-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/craft-common/craft-common">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <property name="context-root" value="craft-employ"/>
-        <property name="java-output-path" value="/craft-employ/target/classes"/>
+        <property name="java-output-path" value="/craft-module-employ/target/classes"/>
+        <property name="context-root" value="craft-module-employ"/>
     </wb-module>
 </project-modules>

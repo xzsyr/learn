@@ -7,9 +7,9 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-employ</artifactId>
+  <artifactId>craft-module-employ</artifactId>
   <packaging>war</packaging>
-  <name>craft-employ Maven Webapp</name>
+  <name>craft-module-employ Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -35,16 +35,16 @@
         </dependency>
         <dependency>
 	        <groupId>com.xzsyr</groupId>
-	        <artifactId>craft-shiro-cas</artifactId>
+	        <artifactId>craft-module-core</artifactId>
 	        <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
 	        <groupId>com.xzsyr</groupId>
-	        <artifactId>craft-common</artifactId>
+	        <artifactId>craft-module-common</artifactId>
 	        <version>0.0.1-SNAPSHOT</version>
         </dependency>
   </dependencies>
   <build>
-    <finalName>craft-employ</finalName>
+    <finalName>craft-module-employ</finalName>
   </build>
 </project>

@@ -1,0 +1,28 @@
+2018-06-11 11:13:45,368 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:13:45,370 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 11:13:45,371 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,372 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:13:45,372 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-11 11:13:45,373 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,374 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:13:45,375 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 11:13:45,376 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,377 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:13:45,378 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-11 11:13:45,380 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,381 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:13:45,381 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 11:13:45,382 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,383 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:13:45,383 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 11:13:45,384 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,385 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:13:45,385 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 11:13:45,386 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,387 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:13:45,387 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 11:13:45,388 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,388 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:13:45,389 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 11:13:45,389 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:13:45,739 ERROR (LoopJob.java:37)- Hello Job执行时间: Mon Jun 11 11:13:45 CST 2018

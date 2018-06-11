@@ -7,14 +7,18 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-core</artifactId>
-  <name>craft-core</name>
+  <artifactId>craft-module-core</artifactId>
+  <name>craft-module-core</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
   <dependencies>
+    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 	<dependency>
 	    <groupId>org.mybatis.spring.boot</groupId>
 	    <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -24,7 +28,7 @@
 	<dependency>
 	    <groupId>com.github.pagehelper</groupId>
 	    <artifactId>pagehelper-spring-boot-starter</artifactId>
-	    <version>1.2.3</version>
+	    <version>1.2.5</version>
 	</dependency>
 	<!-- druid-spring-boot-starter -->
 	<dependency>
@@ -32,5 +36,31 @@
 	    <artifactId>druid-spring-boot-starter</artifactId>
 	    <version>1.1.10</version>
 	</dependency>
+	<!-- shiro-cas -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-core</artifactId>
+	    <version>1.4.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-spring</artifactId>
+	    <version>1.4.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-cas</artifactId>
+	    <version>1.4.0</version>
+	</dependency>
+	<dependency>  
+         <groupId>org.apache.shiro</groupId>  
+         <artifactId>shiro-ehcache</artifactId>  
+          <version>1.4.0</version>
+     </dependency>  
+      <dependency>  
+         <groupId>com.xzsyr</groupId>  
+         <artifactId>craft-module-common</artifactId>  
+         <version>0.0.1-SNAPSHOT</version>
+     </dependency> 
   </dependencies>
 </project>

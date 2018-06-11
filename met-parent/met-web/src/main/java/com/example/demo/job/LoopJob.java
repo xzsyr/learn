@@ -10,7 +10,9 @@ import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.fastjson.JSON;
+import com.example.demo.common.SendEMailUtil;
+
+
 
 /**
  * @author Stronger
@@ -26,6 +28,12 @@ public class LoopJob implements BaseJob{
 		// TODO Auto-generated method stub
 		_log.info(context.getJobDetail().getDescription());
 		_log.info(context.getJobDetail().getKey().getGroup());
+		SendEMailUtil test =new SendEMailUtil();
+		 try {
+			test.sendTextMail(context.getJobDetail().getDescription());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		 _log.error("Hello Job执行时间: " + new Date());  
 	}
 	public LoopJob() {  

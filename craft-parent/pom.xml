@@ -56,18 +56,17 @@
 	</repositories>
   <modules>
     <module>craft-eureka-server</module>
-    <module>craft-employ</module>
-    <module>craft-worker</module>
+    <module>craft-module-employ</module>
+    <module>craft-module-worker</module>
     <module>craft-config-server</module>
     <module>craft-eureka-server-ha</module>
     <module>craft-zuul-server</module>
     <module>craft-zipkin-server</module>
-    <module>craft-voice</module>
-    <module>craft-agent</module>
-    <module>craft-chat</module>
-    <module>craft-contract</module>
-    <module>craft-common</module>
-    <module>craft-shiro-cas</module>
-    <module>craft-core</module>
+    <module>craft-module-voice</module>
+    <module>craft-module-agent</module>
+    <module>craft-module-chat</module>
+    <module>craft-module-contract</module>
+    <module>craft-module-common</module>
+    <module>craft-module-core</module>
   </modules>
 </project>

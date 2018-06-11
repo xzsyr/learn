@@ -7,9 +7,9 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-chat</artifactId>
+  <artifactId>craft-module-chat</artifactId>
   <packaging>war</packaging>
-  <name>craft-chat Maven Webapp</name>
+  <name>craft-module-chat Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
    <dependency>
@@ -35,6 +35,6 @@
         </dependency>
   </dependencies>
   <build>
-    <finalName>craft-chat</finalName>
+    <finalName>craft-module-chat</finalName>
   </build>
 </project>

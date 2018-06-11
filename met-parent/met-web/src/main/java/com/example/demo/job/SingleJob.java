@@ -13,7 +13,9 @@ import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.example.demo.common.SendSMSUtil;
 import com.example.demo.entity.HisJob;
+import com.example.demo.test.CommonsEmailTest;
 import com.example.demo.utils.JdbcUtil;
 
 /**
@@ -35,6 +37,7 @@ public class SingleJob implements BaseJob{
     	hisJob.setJOB_GROUP(jobDetail.getKey().getGroup());
     	hisJob.setDESCRIPTION(jobDetail.getDescription());
     	Persistence(hisJob);
+		 SendSMSUtil.sendSms("17667848667");
         _log.error("New Job执行时间: " + new Date());  
 
     }  

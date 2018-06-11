@@ -38,7 +38,7 @@ public class SendEMailUtil {
 	    * 
 	    * @throws Exception
 	    */
-	   public void sendTextMail() throws Exception
+	   public void sendTextMail(String msg) throws Exception
 	   {
 	      SimpleEmail mail = new SimpleEmail();
 	      // 设置邮箱服务器信息
@@ -53,9 +53,9 @@ public class SendEMailUtil {
 	      // 设置邮件编码
 	      mail.setCharset("UTF-8");
 	      // 设置邮件主题
-	      mail.setSubject("Test Email");
+	      mail.setSubject("JOB Email");
 	      // 设置邮件内容
-	      mail.setMsg("this is a test Text mail");
+	      mail.setMsg(msg);
 	      // 设置邮件发送时间
 	      mail.setSentDate(new Date());
 	      // 发送邮件

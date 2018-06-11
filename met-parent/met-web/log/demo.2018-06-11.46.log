@@ -1,0 +1,8 @@
+2018-06-11 10:05:45,852 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 5.354 seconds (JVM running for 6.026)
+2018-06-11 10:05:45,992 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:05:45,994 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:05:45 CST 2018
+2018-06-11 10:05:48,081 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:05:48,081 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:05:48 CST 2018
+2018-06-11 10:05:54,060 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:05:54,061 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:05:54 CST 2018
+2018-06-11 10:05:55,562 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM QRTZ_JOB_DETAILS JOIN QRTZ_TRIGGERS JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_NAME = QRTZ_TRIGGERS.JOB_NAME AND QRTZ_TRIGGERS.TRIGGER_NAME = QRTZ_CRON_TRIGGERS.TRIGGER_NAME AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP WHERE 1 = 1 

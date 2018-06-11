@@ -1,0 +1,23 @@
+2018-06-11 10:31:59,829 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:59,831 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 10:31:59,832 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:59,833 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:31:59,833 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 10:31:59,834 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:59,835 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:59,835 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 10:31:59,836 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:59,837 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:31:59,838 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 10:31:59,839 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:59,840 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:59,840 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:31:59,841 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:59,841 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:31:59,841 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-11 10:31:59,842 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:59,842 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:59,843 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+2018-06-11 10:31:59,843 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:32:00,118 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:32:00,119 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:32:00 CST 2018

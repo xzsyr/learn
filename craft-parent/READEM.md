@@ -1,16 +1,20 @@
 ## 项目业务架构
-     craft-parent
+    craft-parent
      ###########业务层面###########
-	 craft-employ 雇主模块
-	 craft-worker 被雇佣者模块
-	 craft-agent  代理人模块
-	 craft-void   手艺人之声论坛
-	 craft-chat   闲谈（朋友圈）
-	 craft-contract 契约
+	 craft-module-employ 雇主模块
+	 craft-module-worker 被雇佣者模块
+	 craft-module-agent  代理人模块
+	 craft-module-void   手艺人之声论坛
+	 craft-module-chat   闲谈（朋友圈）
+	 craft-module-contract 契约
+	 
 	 ###########core#############
-	 craft-common 公共模块
-	 craft-core 数据库durid配置
-	 craft-shiro-cas client
+	 craft-module-common 公共模块
+	 craft-module-core 数据库durid配置
+	 
+	 ############view#############
+	 craft-module-admin 后端管理
+	 craft-module-web   前端管理
 	 
 	 ###########架构层面###########
 	 craft-enreka-server 注册中心服务（HA）
@@ -18,6 +22,7 @@
 	 craft-zuul-server  网管路由服务
 	 craft-zipkin-server 链路追踪服务
      craft-cas-server  统一认证中心服务
+     
 ## 部署说明
 
      

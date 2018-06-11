@@ -32,7 +32,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
-import com.xzsyr.shirocas.reaml.MyShiroRealm;
+import com.xzsyr.core.shiro.reaml.MyShiroRealm;
 
 /**  
 * @ClassName: ShiroConfiguration  

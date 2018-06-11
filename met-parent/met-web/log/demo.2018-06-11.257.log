@@ -1,0 +1,22 @@
+2018-06-11 11:15:59,928 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,931 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:15:59,931 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 11:15:59,932 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,933 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:15:59,933 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-11 11:15:59,934 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,935 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:15:59,935 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 11:15:59,936 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,937 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:15:59,937 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 11:15:59,938 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,939 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:15:59,939 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 11:15:59,940 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,940 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 11:15:59,941 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 11:15:59,942 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 11:15:59,942 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 11:15:59,942 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 11:15:59,944 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

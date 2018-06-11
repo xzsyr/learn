@@ -1,0 +1,24 @@
+2018-06-11 10:52:27,158 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:52:27,160 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 10:52:27,161 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:52:27,161 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:52:27,162 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 10:52:27,163 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:52:27,163 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:52:27,163 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 10:52:27,165 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:52:27,165 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:52:27,166 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 10:52:27,167 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:52:27,167 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:52:27,167 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:52:27,168 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:52:27,169 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:52:27,169 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-11 10:52:27,170 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:52:27,171 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:52:27,171 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+2018-06-11 10:52:27,173 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:53:37,106 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 8592 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-11 10:53:37,106 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-11 10:53:37,107 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

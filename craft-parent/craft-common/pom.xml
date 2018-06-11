@@ -7,8 +7,8 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-common</artifactId>
-  <name>craft-common</name>
+  <artifactId>craft-module-common</artifactId>
+  <name>craft-module-common</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
