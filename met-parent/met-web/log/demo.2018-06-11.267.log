@@ -1,0 +1,9 @@
+2018-06-11 11:19:47,264 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
+2018-06-11 11:19:47,350 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
+2018-06-11 11:19:47,625 ERROR (SingleJob.java:41)- New Job执行时间: Mon Jun 11 11:19:47 CST 2018
+2018-06-11 11:19:48,023 ERROR (SingleJob.java:41)- New Job执行时间: Mon Jun 11 11:19:48 CST 2018
+2018-06-11 11:35:43,165 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
+2018-06-11 11:35:43,452 ERROR (SingleJob.java:41)- New Job执行时间: Mon Jun 11 11:35:43 CST 2018
+2018-06-11 14:09:58,938 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 10004 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-11 14:09:58,940 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-11 14:09:58,940 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

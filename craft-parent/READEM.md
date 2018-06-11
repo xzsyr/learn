@@ -4,7 +4,7 @@
 	 craft-module-employ 雇主模块
 	 craft-module-worker 被雇佣者模块
 	 craft-module-agent  代理人模块
-	 craft-module-void   手艺人之声论坛
+	 craft-module-voice  手艺人之声论坛
 	 craft-module-chat   闲谈（朋友圈）
 	 craft-module-contract 契约
 	 
@@ -13,15 +13,20 @@
 	 craft-module-core 数据库durid配置
 	 
 	 ############view#############
-	 craft-module-admin 后端管理
-	 craft-module-web   前端管理
+	 craft-module-admin 后端管理-用户角色分配、角色管理、广告维护...
+	 craft-module-web   前端管理  
 	 
 	 ###########架构层面###########
 	 craft-enreka-server 注册中心服务（HA）
 	 craft-config-server 配置中心服务
 	 craft-zuul-server  网管路由服务
 	 craft-zipkin-server 链路追踪服务
+	 
      craft-cas-server  统一认证中心服务
+     craft-mq-server 消息服务
+     craft-search-server 搜索服务
+	 craft-hdfs-server  文件服务
+	 craft-job-server  分布式任务服务
      
 ## 部署说明
 

@@ -1,0 +1,18 @@
+2018-06-11 14:41:54,640 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 14:41:54,641 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 14:41:54,642 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:41:54,642 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 14:41:54,643 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 14:41:54,644 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:41:54,644 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 14:41:54,644 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 14:41:54,645 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:41:54,645 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 14:41:54,645 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-11 14:41:54,646 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:41:54,647 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 14:41:54,647 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+2018-06-11 14:41:54,647 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:44:20,963 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 10004 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-11 14:44:20,963 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-11 14:44:20,963 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default

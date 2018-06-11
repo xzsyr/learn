@@ -1,6 +1,17 @@
-2018-06-11 11:19:47,264 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
-2018-06-11 11:19:47,350 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
-2018-06-11 11:19:47,625 ERROR (SingleJob.java:41)- New Job执行时间: Mon Jun 11 11:19:47 CST 2018
-2018-06-11 11:19:48,023 ERROR (SingleJob.java:41)- New Job执行时间: Mon Jun 11 11:19:48 CST 2018
-2018-06-11 11:35:43,165 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
-2018-06-11 11:35:43,452 ERROR (SingleJob.java:41)- New Job执行时间: Mon Jun 11 11:35:43 CST 2018
+2018-06-11 14:48:15,685 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 14:48:15,687 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:48:15,688 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 14:48:15,689 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 14:48:15,689 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:48:15,690 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 14:48:15,690 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 14:48:15,691 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:48:15,691 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 14:48:15,691 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 14:48:15,692 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:48:15,693 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 14:48:15,693 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-11 14:48:15,693 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 14:48:15,694 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 14:48:15,694 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+2018-06-11 14:48:15,695 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

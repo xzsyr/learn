@@ -17,5 +17,6 @@ package com.xzsyr.employ.entity;
  * @created 2018年4月28日 下午1:59:13    
  */
 public class EmployInfo {
-
+   private Long empId;
+   private Long uId;
 }
