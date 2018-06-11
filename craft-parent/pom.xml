@@ -68,5 +68,7 @@
     <module>craft-module-contract</module>
     <module>craft-module-common</module>
     <module>craft-module-core</module>
+    <module>craft-module-admin</module>
+    <module>craft-module-web</module>
   </modules>
 </project>
