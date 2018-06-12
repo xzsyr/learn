@@ -28,6 +28,16 @@
 		    <groupId>org.springframework.retry</groupId>
 		    <artifactId>spring-retry</artifactId>
 		</dependency>
+		<!-- 服务链路追踪 -->
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+	    <dependency>
+	        <groupId>com.xzsyr</groupId>
+	        <artifactId>craft-module-core</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+        </dependency>
   </dependencies>
   <build>
     <finalName>craft-zuul-server</finalName>
