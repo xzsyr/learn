@@ -62,6 +62,12 @@ eureka:
 zuul:
   prefix: /api
   routes:
+    admin:
+      path: /admin/**
+      serviceId: craft-admin-server
+    web:
+      path: /web/**
+      serviceId: craft-web-server
     work:
       path: /work/**
       serviceId: craft-work-server
