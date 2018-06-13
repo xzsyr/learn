@@ -27,6 +27,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.xzsyr.core.entity.SysPermission;
 import com.xzsyr.core.entity.SysRole;
@@ -44,13 +45,9 @@ import com.xzsyr.core.utils.JWTUtil;
 */
 @SuppressWarnings("all")
 public class MyRealm extends AuthorizingRealm{
-
+	
+	@Autowired
     private UserInfoService userService;
-
-    @Autowired
-    public void setUserService(UserInfoService userService) {
-        this.userService = userService;
-    }
 
     /**
      * 大坑！，必须重写此方法，不然Shiro会报错

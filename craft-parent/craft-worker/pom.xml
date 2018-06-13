@@ -33,16 +33,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
-        <!-- <dependency>
+        <!-- core模块 -->
+        <dependency>
 	        <groupId>com.xzsyr</groupId>
 	        <artifactId>craft-module-core</artifactId>
 	        <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-	        <groupId>com.xzsyr</groupId>
-	        <artifactId>craft-module-common</artifactId>
-	        <version>0.0.1-SNAPSHOT</version>
-        </dependency> -->
   </dependencies>
   <build>
     <finalName>craft-module-worker</finalName>

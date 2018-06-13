@@ -22,14 +22,17 @@ import com.xzsyr.core.shiro.reaml.MyRealm;
 
 @Configuration 
 public class ShiroConfig {
-	 
-	
 	
     @Bean
     public RedisCacheManager redisCacheManager() {
         return new RedisCacheManager();
     }
-	
+    
+    @Bean("MyRealm")
+	public MyRealm getRealm(){
+    	return new MyRealm();
+	}
+    
 	@Bean("securityManager")
     public DefaultWebSecurityManager getManager(MyRealm realm) {
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
@@ -71,7 +74,7 @@ public class ShiroConfig {
       //2.不拦截的请求
         filterRuleMap.put("/css/**","anon");
         filterRuleMap.put("/js/**","anon");
-        filterRuleMap.put("/login", "anon");
+        filterRuleMap.put("/login3", "anon");
         // 此处将logout页面设置为anon，而不是logout，因为logout被单点处理，而不需要再被shiro的logoutFilter进行拦截
         filterRuleMap.put("/logout","anon");
         filterRuleMap.put("/error","anon");

@@ -8,6 +8,9 @@
 */ 
 package com.xzsyr.core.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.xzsyr.core.dao.UserInfoMapper;
 import com.xzsyr.core.entity.UserInfo;
 import com.xzsyr.core.service.UserInfoService;
 
@@ -19,18 +22,13 @@ import com.xzsyr.core.service.UserInfoService;
 *    
 */
 public class UserInfoServiceImpl implements UserInfoService{
-
-	/* (非 Javadoc)  
-	* <p>Title: findByUsername</p>  
-	* <p>Description: </p>  
-	* @param userName
-	* @return  
-	* @see com.xzsyr.core.service.UserInfoService#findByUsername(java.lang.String)  
-	*/  
+	@Autowired
+	private UserInfoMapper userMapper;
+	 
+     
 	@Override
 	public UserInfo findByUsername(String userName) {
-		// TODO Auto-generated method stub
-		return null;
+		return userMapper.findByUsername(userName);
 	}
 
 }
