@@ -8,7 +8,6 @@
 */ 
 package com.xzsyr.core.service;
 
-import org.springframework.stereotype.Service;
 
 import com.xzsyr.core.entity.UserInfo;
 

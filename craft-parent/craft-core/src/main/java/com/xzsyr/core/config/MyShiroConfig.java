@@ -21,7 +21,7 @@ import com.xzsyr.core.shiro.filter.JWTFilter;
 import com.xzsyr.core.shiro.reaml.MyRealm;
 
 @Configuration 
-public class ShiroConfig {
+public class MyShiroConfig {
 	
     @Bean
     public RedisCacheManager redisCacheManager() {
@@ -39,10 +39,7 @@ public class ShiroConfig {
         // 使用自己的realm
         manager.setRealm(realm);
         manager.setCacheManager(redisCacheManager());
-        /*
-         * 关闭shiro自带的session，详情见文档
-         * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
-         */
+        //关闭shiro自带的session，详情见文档
         DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
         DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
         defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
@@ -64,17 +61,14 @@ public class ShiroConfig {
         factoryBean.setSecurityManager(securityManager);
         factoryBean.setUnauthorizedUrl("/401");
 
-        /*
-         * 自定义url规则
-         * http://shiro.apache.org/web.html#urls-
-         */
+        //自定义url规则
         Map<String, String> filterRuleMap = new HashMap<>();
         // 所有请求通过我们自己的JWT Filter
         filterRuleMap.put("/**", "jwt");
-      //2.不拦截的请求
+        //2.不拦截的请求
         filterRuleMap.put("/css/**","anon");
         filterRuleMap.put("/js/**","anon");
-        filterRuleMap.put("/login3", "anon");
+        filterRuleMap.put("/login", "anon");
         // 此处将logout页面设置为anon，而不是logout，因为logout被单点处理，而不需要再被shiro的logoutFilter进行拦截
         filterRuleMap.put("/logout","anon");
         filterRuleMap.put("/error","anon");
@@ -82,7 +76,7 @@ public class ShiroConfig {
         filterRuleMap.put("/user", "authc"); //需要登录
 
         //4.登录过的不拦截
-       // filterRuleMap.put("/**", "authc");
+        // filterRuleMap.put("/**", "authc");
         // 访问401和404页面不通过我们的Filter
         filterRuleMap.put("/401", "anon");
         factoryBean.setFilterChainDefinitionMap(filterRuleMap);

@@ -8,29 +8,22 @@
 */ 
 package com.xzsyr.core.shiro.reaml;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.annotation.Resource;
 
-import org.apache.log4j.LogManager;
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
-import org.apache.shiro.cas.CasRealm;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import com.xzsyr.core.entity.SysPermission;
-import com.xzsyr.core.entity.SysRole;
 import com.xzsyr.core.entity.UserInfo;
 import com.xzsyr.core.service.UserInfoService;
 import com.xzsyr.core.shiro.token.JWTToken;
@@ -43,7 +36,6 @@ import com.xzsyr.core.utils.JWTUtil;
 * @date 2018年6月10日  
 *    
 */
-@SuppressWarnings("all")
 public class MyRealm extends AuthorizingRealm{
 	
 	@Autowired
@@ -65,9 +57,18 @@ public class MyRealm extends AuthorizingRealm{
         String username = JWTUtil.getUsername(principals.toString());
         UserInfo user = userService.findByUsername(username);
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-       // simpleAuthorizationInfo.addRoles(user.getRoleList());
-      //  Set<String> permission = new HashSet<>(Arrays.asList(user.getPermission().split(",")));
-      //  simpleAuthorizationInfo.addStringPermissions(permission);
+        
+        Collection<String> roles = new ArrayList<>();   
+        Set<String> permissions = new HashSet<>();
+        user.getRoleList().forEach(a->{
+        	a.getPermissions().forEach(permisson->{
+        		permissions.add(permisson.getPermission());
+        	});
+        	roles.add(a.getRole());
+        });
+        
+        simpleAuthorizationInfo.addRoles(roles);
+        simpleAuthorizationInfo.addStringPermissions(permissions);
         return simpleAuthorizationInfo;
     }
 
@@ -80,16 +81,16 @@ public class MyRealm extends AuthorizingRealm{
         // 解密获得username，用于和数据库进行对比
         String username = JWTUtil.getUsername(token);
         if (username == null) {
-            throw new AuthenticationException("token invalid");
+            throw new AuthenticationException("无效的token信息!");
         }
 
         UserInfo userBean = userService.findByUsername(username);
         if (userBean == null) {
-            throw new AuthenticationException("User didn't existed!");
+            throw new AuthenticationException("用户信息不存在，请重试!");
         }
 
         if (! JWTUtil.verify(token, username, userBean.getPassword())) {
-            throw new AuthenticationException("Username or password error");
+            throw new AuthenticationException("用户名或密码错误，请重试!");
         }
 
         return new SimpleAuthenticationInfo(token, token, "my_realm");
