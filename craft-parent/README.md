@@ -38,15 +38,23 @@ JAVA语言开发、跨平台、高性能、高可用、安全、服务化、模�
 ##.   技术架构
 ###1.  业务层面
 - **craft-module-employ 雇主模块**
+&nbsp;<p>注册/登录   我的发布、账号设置、我的契约、我的订单</p>
 - **craft-module-worker 工作者模块**
+&nbsp;<p>注册/登录   我的求职、账号设置、我的契约、我的订单</p>
 - **craft-module-agent  代理人模块**
+&nbsp;<p> 工具类、通用方法等</p>
 - **craft-module-voice  工匠之声（论坛）**
+&nbsp;<p>注册/登录   发帖、评论</p>
 - **craft-module-chat   微聊（朋友圈）**
+&nbsp;<p>注册/登录 添加好友、添加关注、   聊天、通讯录、朋友圈</p>
 - **craft-module-contract 契约**
-
+&nbsp;<p>新增契约、编辑、查询、删除、公示</p>
 ###2.  框架core模块
 - **craft-module-common 公共模块**
+&nbsp;<p> 工具类、通用方法等</p>
 - **craft-module-core 认证授权模块**
+&nbsp;<p> 用户管理、角色管理、组管理、区域管理</p>
+ 
 
 ###3.  业务内核模块	 
 - **craft-module-yipay 易支付**
