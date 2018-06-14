@@ -1,4 +1,4 @@
-package com.xzsyr.zuul.filter;
+package com.xzsyr.admin.filter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +41,7 @@ public class IPFilter extends ZuulFilter{
        //配置本地IP白名单，生产环境可放入数据库或者redis中
         List<String> ips=new ArrayList<String>();
         ips.add("0:0:0:0:0:0:0:1");
+        ips.add("127.0.0.1");
         ips.add("192.168.8.94");
         if(!ips.contains(ipAddr)){
             logger.info("IP地址校验不通过！！！");

@@ -23,10 +23,7 @@ public class AdminController {
     public ResponseBean login(
     		@RequestParam("username") String username,
     		@RequestParam("password") String password) {
-		UserInfo userBean =new UserInfo();
-		userBean.setPassword("admin");
-		userBean.setUsername("admin");
-		//UserInfo userBean = userService.findByUsername(username);
+		UserInfo userBean = userService.findByUsername(username);
 		System.out.println(userBean.getUid());
         if (userBean.getPassword().equals(password)) {
             return new ResponseBean(200, "Login success", JWTUtil.sign(username, password));

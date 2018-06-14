@@ -10,15 +10,15 @@
 	 
 	 ###########core#############
 	 craft-module-common 公共模块
-	 craft-module-core 数据库durid配置
+	 craft-module-core 认证授权模块
 	 
 	 craft-module-yipay 易支付
 	 craft-module-order 订单模块
 	 craft-module-ad 广告模块
 	 
 	 ############view#############
-	 craft-module-admin 后端管理-用户角色分配、角色管理、广告维护...
-	 craft-module-web   前端管理  
+	 craft-admin-gateway 后端网关
+	 craft-web-gateway   前端网关  
 	 
 	 
 	 
@@ -28,7 +28,6 @@
 	 craft-zuul-server  网管路由服务
 	 craft-zipkin-server 链路追踪服务
 	 
-     craft-cas-server  统一认证中心服务
      craft-mq-server 消息服务
      craft-search-server 搜索服务
 	 craft-dfs-server  文件服务

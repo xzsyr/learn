@@ -55,6 +55,20 @@ pagehelper:
 # config: classpath:logback-${spring.profiles.active}.xml
 logging:
   config: classpath:logback-boot.xml
+  
+#==================== 网关.路由  ============================ 
+zuul:
+  prefix: /api
+  routes:
+    work:
+      path: /work/**
+      serviceId: craft-work-server
+    employ:
+      path: /employ/**
+      serviceId: craft-employ-server
+  retryable: true
+  MaxAutoRetries: 2
+  MaxAutoRetriesNextServer: 0
 eureka:
   client:
     serviceUrl:

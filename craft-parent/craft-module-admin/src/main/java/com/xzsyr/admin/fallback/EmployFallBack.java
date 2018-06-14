@@ -1,4 +1,4 @@
-package com.xzsyr.zuul.fallback;
+package com.xzsyr.admin.fallback;
 
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.client.ClientHttpResponse;

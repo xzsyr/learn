@@ -55,20 +55,22 @@
 		</repository>
 	</repositories>
   <modules>
+    <!-- 通用微服务 -->
     <module>craft-eureka-server</module>
+    <module>craft-eureka-server-ha</module>
+    <module>craft-zipkin-server</module>
+    <module>craft-config-server</module>
+    <!-- 业务微服务 -->
     <module>craft-module-employ</module>
     <module>craft-module-worker</module>
-    <module>craft-config-server</module>
-    <module>craft-eureka-server-ha</module>
-    <module>craft-zuul-server</module>
-    <module>craft-zipkin-server</module>
     <module>craft-module-voice</module>
     <module>craft-module-agent</module>
     <module>craft-module-chat</module>
     <module>craft-module-contract</module>
     <module>craft-module-common</module>
     <module>craft-module-core</module>
-    <module>craft-module-admin</module>
-    <module>craft-module-web</module>
+    <!-- 网关服务 -->
+    <module>craft-admin-gateway</module>
+    <module>craft-web-gateway</module>
   </modules>
 </project>

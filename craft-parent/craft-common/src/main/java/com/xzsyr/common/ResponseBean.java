@@ -1,6 +1,6 @@
 package com.xzsyr.common;
 
-public class ResponseBean {
+public class ResponseBean<T> {
 	// http 状态码
     private int code;
 
@@ -8,9 +8,9 @@ public class ResponseBean {
     private String msg;
 
     // 返回的数据
-    private Object data;
+    private T data;
 
-    public ResponseBean(int code, String msg, Object data) {
+    public ResponseBean(int code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
@@ -32,11 +32,11 @@ public class ResponseBean {
         this.msg = msg;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 

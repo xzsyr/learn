@@ -11,6 +11,8 @@ package com.xzsyr.core.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Table;
+
 /**  
 * @ClassName: User  
 * @Description: TODO 
@@ -18,6 +20,7 @@ import java.util.List;
 * @date 2018年6月10日  
 *    
 */
+@Table(name="TB_GROUP")
 public class UserInfo implements Serializable{
     /**  
 	* @Fields field:field:{todo}

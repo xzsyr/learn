@@ -8,10 +8,11 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 
 
- 
+@EnableZuulProxy
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
@@ -19,7 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableHystrixDashboard
 @RefreshScope 
 @ComponentScan("com.xzsyr")
-@MapperScan("com.xzsyr")
+@MapperScan("com.xzsyr.*.dao")
 public class AdminApplication 
 {
 	public static void main(String[] args) {

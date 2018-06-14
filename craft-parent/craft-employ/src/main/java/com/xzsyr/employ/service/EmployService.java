@@ -9,7 +9,12 @@
 
 package com.xzsyr.employ.service;
 
-  
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.github.pagehelper.PageInfo;
+import com.xzsyr.employ.dto.EmployDTO;
+import com.xzsyr.employ.entity.EmployInfo;
+
 /**        
  * Title: EmployService.java    
  * Description: 描述
@@ -18,5 +23,8 @@ package com.xzsyr.employ.service;
  */
 
 public interface EmployService {
+
+
+	PageInfo<EmployInfo> pages(@RequestBody EmployDTO empDto, int pageNum, int pageSize);
 
 }

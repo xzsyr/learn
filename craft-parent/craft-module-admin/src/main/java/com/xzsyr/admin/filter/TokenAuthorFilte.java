@@ -1,4 +1,4 @@
-package com.xzsyr.zuul.filter;
+package com.xzsyr.admin.filter;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -9,6 +9,9 @@
 
 package com.xzsyr.employ.service.impl;
 
+import com.github.pagehelper.PageInfo;
+import com.xzsyr.employ.dto.EmployDTO;
+import com.xzsyr.employ.entity.EmployInfo;
 import com.xzsyr.employ.service.EmployService;
 
 /**        
@@ -19,5 +22,11 @@ import com.xzsyr.employ.service.EmployService;
  */
 
 public class EmployServiceImpl implements EmployService{
+
+	@Override
+	public PageInfo<EmployInfo> pages(EmployDTO empDto, int pageNum, int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

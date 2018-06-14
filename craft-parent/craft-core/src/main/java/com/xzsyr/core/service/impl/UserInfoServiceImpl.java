@@ -9,6 +9,7 @@
 package com.xzsyr.core.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.xzsyr.core.dao.UserInfoMapper;
 import com.xzsyr.core.entity.UserInfo;
@@ -21,6 +22,7 @@ import com.xzsyr.core.service.UserInfoService;
 * @date 2018年6月10日  
 *    
 */
+@Service
 public class UserInfoServiceImpl implements UserInfoService{
 	@Autowired
 	private UserInfoMapper userMapper;
