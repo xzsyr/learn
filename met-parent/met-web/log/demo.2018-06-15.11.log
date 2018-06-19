@@ -1,0 +1,12 @@
+2018-06-15 14:36:19,133 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:19,136 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:36:19,136 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-15 14:36:19,137 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:19,138 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-15 14:36:19,139 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-15 14:36:19,140 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:19,459 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
+2018-06-15 14:36:20,168 INFO (SingleJob.java:66)- ---hisjob:save ---操作成功!----
+2018-06-15 14:36:20,479 ERROR (SingleJob.java:41)- New Job执行时间: Fri Jun 15 14:36:20 CST 2018
+2018-06-15 14:36:20,479 ERROR (SingleJob.java:41)- New Job执行时间: Fri Jun 15 14:36:20 CST 2018
+2018-06-15 14:36:23,689 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM QRTZ_JOB_DETAILS JOIN QRTZ_TRIGGERS JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_NAME = QRTZ_TRIGGERS.JOB_NAME AND QRTZ_TRIGGERS.TRIGGER_NAME = QRTZ_CRON_TRIGGERS.TRIGGER_NAME AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP WHERE 1 = 1 

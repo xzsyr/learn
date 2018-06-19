@@ -1,0 +1,4 @@
+2018-06-12 14:41:25,808 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 16328 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-12 14:41:25,813 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-12 14:41:25,813 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-12 14:41:31,744 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 6.354 seconds (JVM running for 6.971)

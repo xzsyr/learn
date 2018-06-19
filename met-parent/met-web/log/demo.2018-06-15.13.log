@@ -1,0 +1,23 @@
+2018-06-15 14:36:23,704 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-15 14:36:23,707 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,708 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-15 14:36:23,708 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-15 14:36:23,709 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,710 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:36:23,711 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-15 14:36:23,712 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,713 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-15 14:36:23,713 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 7(Integer)
+2018-06-15 14:36:23,715 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,716 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:36:23,717 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-15 14:36:23,718 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,719 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-15 14:36:23,719 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-15 14:36:23,720 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,721 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:36:23,721 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-15 14:36:23,724 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:36:23,725 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-15 14:36:23,725 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-15 14:36:23,727 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

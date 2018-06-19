@@ -1,0 +1,25 @@
+2018-06-15 14:44:31,380 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-15 14:44:31,382 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-15 14:44:31,383 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,022 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_HISJOB 
+2018-06-15 14:44:32,022 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-15 14:44:32,024 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,024 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_HISJOB LIMIT 5 
+2018-06-15 14:44:32,024 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-15 14:44:32,026 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+2018-06-15 14:44:32,026 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:44:32,027 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-15 14:44:32,028 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,028 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:44:32,029 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-15 14:44:32,030 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,030 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:44:32,031 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-15 14:44:32,032 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,032 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:44:32,033 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-15 14:44:32,034 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,034 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-15 14:44:32,035 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-15 14:44:32,036 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-15 14:44:32,036 INFO (HisJobController.java:51)- -------hisJobs:list---------
