@@ -1,0 +1,12 @@
+2018-06-11 10:03:53,096 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-11 10:03:53,099 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:03:53,100 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:03:53,101 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 10:03:53,102 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:03:53,103 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:03:53,103 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:03:53,105 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:03:54,190 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:03:54,191 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:03:54 CST 2018
+2018-06-11 10:04:00,112 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:00,112 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:00 CST 2018

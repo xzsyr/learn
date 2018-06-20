@@ -1,0 +1,13 @@
+2018-06-08 09:31:58,492 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:31:58,494 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-08 09:31:58,494 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-08 09:31:58,496 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:31:58,497 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-08 09:31:58,498 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-08 09:31:58,499 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:31:58,500 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-08 09:31:58,500 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-08 09:31:58,501 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-08 09:32:00,081 INFO (LoopJob.java:27)- 测试2
+2018-06-08 09:32:00,082 INFO (LoopJob.java:28)- 40
+2018-06-08 09:32:00,082 ERROR (LoopJob.java:29)- Hello Job执行时间: Fri Jun 08 09:32:00 CST 2018

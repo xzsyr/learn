@@ -1,0 +1,8 @@
+2018-06-11 10:18:21,557 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:18:21,558 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:18:21,560 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:19:25,942 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 8272 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-11 10:19:25,943 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-11 10:19:25,943 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-11 10:19:30,549 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 5.02 seconds (JVM running for 5.515)
+2018-06-11 10:19:40,172 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM QRTZ_JOB_DETAILS JOIN QRTZ_TRIGGERS JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_NAME = QRTZ_TRIGGERS.JOB_NAME AND QRTZ_TRIGGERS.TRIGGER_NAME = QRTZ_CRON_TRIGGERS.TRIGGER_NAME AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP WHERE 1 = 1 

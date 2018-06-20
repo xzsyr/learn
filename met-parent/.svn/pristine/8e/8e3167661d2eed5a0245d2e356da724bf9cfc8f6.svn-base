@@ -1,0 +1,25 @@
+2018-06-06 07:56:55,154 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-06 07:56:55,159 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)
+2018-06-06 07:56:55,162 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:56:55,166 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_USER set GID=?, UNAME=?, EMPNUM=?, ISABLE=? WHERE UID=? 
+2018-06-06 07:56:55,167 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Long), 王吉壮(String), 0003(String), 0(String), 2(Integer)
+2018-06-06 07:56:55,189 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-06 07:56:55,191 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-06 07:56:55,191 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:56:55,193 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:56:55,193 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME,g.DESCRIPTION FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 100 
+2018-06-06 07:56:55,194 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:56:55,197 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+2018-06-06 07:56:55,198 INFO (UserController.java:146)- -------user:enable---------
+2018-06-06 07:56:55,742 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-06 07:56:55,743 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-06 07:56:55,744 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:56:55,745 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: UPDATE TB_USER set GID=?, UNAME=?, EMPNUM=?, ISABLE=? WHERE UID=? 
+2018-06-06 07:56:55,745 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Long), 刘提提(String), 0002(String), 1(String), 1(Integer)
+2018-06-06 07:56:55,789 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+2018-06-06 07:56:55,792 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-06 07:56:55,793 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:56:55,795 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 07:56:55,797 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME,g.DESCRIPTION FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 100 
+2018-06-06 07:56:55,797 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 07:56:55,801 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5

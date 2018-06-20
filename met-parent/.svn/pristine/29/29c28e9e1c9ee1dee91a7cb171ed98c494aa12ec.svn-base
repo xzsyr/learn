@@ -1,0 +1,24 @@
+2018-06-11 10:31:35,487 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+2018-06-11 10:31:35,491 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-11 10:31:35,491 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:31:35,492 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:35,493 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-11 10:31:35,493 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:31:35,495 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-11 10:31:35,496 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:31:35,496 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 39(Integer)
+2018-06-11 10:31:35,497 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:35,498 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:35,499 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1(Integer)
+2018-06-11 10:31:35,500 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:35,502 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:31:35,502 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 37(Integer)
+2018-06-11 10:31:35,503 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:35,504 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:35,505 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 6(Integer)
+2018-06-11 10:31:35,506 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:35,507 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-11 10:31:35,507 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 40(Integer)
+2018-06-11 10:31:35,509 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:31:35,511 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select *from TB_USER u where u.UID = ? 
+2018-06-11 10:31:35,513 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 2(Integer)

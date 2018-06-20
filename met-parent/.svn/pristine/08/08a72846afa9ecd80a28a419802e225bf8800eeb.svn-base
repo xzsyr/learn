@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>协同办工-待办任务</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="/AdminLTE-2.3.5/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="/AdminLTE-2.3.5/plugins/iCheck/all.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/AdminLTE-2.3.5/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="/AdminLTE-2.3.5/dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- jQuery 2.2.3 -->
+  <script src="/AdminLTE-2.3.5/plugins/jQuery/jquery-2.2.3.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+  <base href="http://localhost:8080/">
+  <style type="text/css">
+    .form-title{
+	float: left;padding:7px 0px 0px 0px;width:auto;font-size: 16px;
+	}
+	.form-input{
+		float: left;width:160px;padding: 0px;
+	}
+	.form-select{
+		width:150px !important;
+	}
+	.form-item{
+		float: left;padding: 10px;
+	}
+	.form-time-range{
+		float: left;padding: 5px 3px; width: 23px;
+	}
+  
+  </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+ <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>协同</b>任务</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>协同办工</b>-任务管理</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="AdminLTE-2.3.5/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="AdminLTE-2.3.5/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="AdminLTE-2.3.5/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="AdminLTE-2.3.5/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="AdminLTE-2.3.5/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 new members joined
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> You changed your username
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Create a nice theme
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Some task I need to do
+                        <small class="pull-right">60%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">60% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Make beautiful transitions
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="/AdminLTE-2.3.5/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="AdminLTE-2.3.5/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="/AdminLTE-2.3.5/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">任务管理系统</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>仪表盘</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.html"><i class="fa fa-bar-chart"></i>任务监控报表</a></li>
+            <li class="active"><a href="index2.html"><i class="fa fa-line-chart"></i>系统日志监控报表</a></li>
+          </ul>
+        </li>
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-tasks"></i>
+            <span>任务管理</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right">7</span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="show/jobManager.html"><i class="fa fa-tags"></i>任务分配</a></li>
+            <li><a href="show/WaitingManager.html"><i class="fa fa-tag"></i>待办任务
+            <span class="pull-right-container">
+             <small class="label pull-right bg-red">2</small>
+            </span></a></li>
+            <li><a href="show/TrackManager.html"><i class="fa fa-hourglass-half"></i>已办任务
+            <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">1</small>
+            </span></a></li>
+            <li><a href="show/FinishManager.html"><i class="fa fa-hourglass-end"></i>办结任务
+            <span class="pull-right-container">
+             <small class="label pull-right bg-green">4</small>
+            </span></a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-group (alias)"></i>
+            <span>组管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="show/groupManager.html"><i class="fa fa-list-alt"></i>组列表</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i>
+            <span>用户管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="show/userManager.html"><i class="fa fa-list-alt"></i>用户列表</a></li>
+            <li><a href="pages/UI/general.html"><i class="fa fa-key"></i>密码管理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+                        组管理列表
+        <small>预览组信息</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tables</a></li>
+        <li class="active">Simple</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content" id="app">
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+				<div class="form-item">
+					<div class="form-title">
+						<span class=" pull-right">组名称：</span>
+					</div>
+					<div class="form-input">
+						<div class="input-group ">
+							<input type="text" class="form-control" name="rolename" maxlength=20 placeholder="请输入组名称" value="">
+						</div>
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="form-title">
+						<span class="pull-right">组描述：</span>
+					</div>
+					<div class="form-input">
+						<div class="input-group ">
+							<input type="text" class="form-control pull-right" maxlength=20 name="email" placeholder="请输入组描述" value="">
+						</div>
+					</div>
+			    </div>
+				<div class="pull-right form-item">
+					<button type="submit" class="btn btn-primary" accesskey="S"><i class="fa fa-search"></i> 检索</button>
+	                <button class="btn  btn-success" data-toggle="modal" data-target="#addModal"><i class="fa fa-plus"></i>&nbsp;新增</button>
+	            </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-bordered table-striped table-hover">
+               <thead>
+	                <tr>
+	                    <th>序号</th>
+                        <th>组名称</th>
+                        <th>是否可用</th>
+                        <th>组描述</th>
+                        <th>操作</th>
+	                </tr>
+                </thead>
+                <tbody>
+                    <template v-for="(row, index) in rows ">
+                        <tr v-if="index>=(curpage-1)*pagesize&&index<curpage*pagesize">
+                        <td>{{row.gid}}</td>
+                        <td>{{row.gname}}</td>
+                        <td><span v-if="row.isable==='0'">是</span><span v-else="row.isable==='1'">否</span></td>
+                        <td>{{row.description}}</td>
+                        <td class="table-operator">
+	               	    	<button v-on:click="Edit(row)" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i>&nbsp;修改</button>
+	               	    	<button v-on:click="Remove(row.gid,index)"  class="btn btn-xs btn-danger"><i class="fa fa-trash"></i>&nbsp;删除</button>
+	               	    	<span v-if="row.isable === '0'">
+	               	    	    <button v-on:click="Disable(row.gid,index)" class="btn btn-xs btn-info"><i class="fa fa-chain-broken"></i>&nbsp;禁用</button>
+						    </span>
+						    <span v-else="row.isable === '1'">
+	               	    	    <button v-on:click="Enable(row.gid,index)"  class="btn btn-xs btn-success"><i class="fa fa-chain"></i>&nbsp;启用</button>
+						    </span>
+	               	    	
+	                	</td>
+                        </tr>
+                    </template>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.content -->
+	    <nav style="float:right;">
+            <ul class="pagination pagination-lg">
+                <template v-for="page in Math.ceil(rows.length/pagesize)">
+                    <li v-on:click="PrePage()" id="prepage" v-if="page==1" class="disabled"><a href="group/list">上一页</a></li>
+                    <li v-if="page==1" class="active" v-on:click="NumPage(page, $event)"><a href="#">{{page}}</a></li>
+                    <li v-else v-on:click="NumPage(page, $event)"><a href="group/list">{{page}}</a></li>
+                    <li id="nextpage" v-on:click="NextPage()" v-if="page==Math.ceil(rows.length/pagesize)"><a href="group/list">下一页</a></li>
+                </template>
+            </ul>
+	    </nav>
+      </div>
+      <!-- 新增 -->
+	  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+             <form class="form-horizontal" role="form">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel">新增组信息</h4>
+	            </div>
+	            <div class="modal-body">
+					  <div class="form-group">
+					    <label for="firstname" class="col-sm-2 control-label">组名称</label>
+					    <div class="col-sm-10">
+					      <input type="hidden" class="form-control" id="gid" v-model="rowtemplate.gid">
+					      <input type="text" class="form-control" id="gname" v-model="rowtemplate.gname" placeholder="请输入名字">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="lastname" class="col-sm-2 control-label">组描述</label>
+					    <div class="col-sm-10">
+					      <textarea class="form-control" rows="3" id="description" v-model="rowtemplate.description" placeholder="请输入组描述信息"></textarea>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="lastname" class="col-sm-2 control-label">是否可用</label>
+					    <div class="col-sm-10">
+			                <label>
+			                  <input type="radio" id="one" value="0" v-model="rowtemplate.isable"  class="minimal" checked>&nbsp;&nbsp;是
+			                </label>&nbsp;&nbsp;&nbsp;&nbsp;
+			                <label>
+			                  <input type="radio" id="two" value="1" v-model="rowtemplate.isable" class="minimal">&nbsp;&nbsp;否
+			                </label>
+					    </div>
+					  </div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	                <button type="button" v-on:click="Save" class="btn btn-primary">提交更改</button>
+	            </div>
+	         </form>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	 </div>
+	 <!-- 编辑-->
+      <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+             <form class="form-horizontal" role="form">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel">编辑组信息</h4>
+	            </div>
+	            <div class="modal-body">
+					  <div class="form-group">
+					    <label for="firstname" class="col-sm-2 control-label">组名称</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" id="gname" v-model= "rowtemplate.gname" placeholder="请输入名字">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="lastname" class="col-sm-2 control-label">组描述</label>
+					    <div class="col-sm-10">
+					      <textarea class="form-control" rows="3" id="description" v-model="rowtemplate.description"  placeholder="请输入组描述信息"></textarea>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="lastname" class="col-sm-2 control-label">是否可用</label>
+					    <div class="col-sm-10">
+			                <label>
+			                  <input type="radio" name="r1" class="minimal" checked>&nbsp;&nbsp;是
+			                </label>&nbsp;&nbsp;&nbsp;&nbsp;
+			                <label>
+			                  <input type="radio" name="r1" class="minimal">&nbsp;&nbsp;否
+			                </label>
+					    </div>
+					  </div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	                <button type="button" v-on:click="DoEdit" class="btn btn-primary">提交更改</button>
+	            </div>
+	         </form>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	</div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.3.5
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- Bootstrap 3.3.6 -->
+<script src="/AdminLTE-2.3.5/bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="/AdminLTE-2.3.5/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/AdminLTE-2.3.5/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/AdminLTE-2.3.5/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/AdminLTE-2.3.5/dist/js/demo.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="/AdminLTE-2.3.5/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	$('.sidebar-menu').find('a').each(function () {
+        if (this.href == document.location.href || document.location.href.search(this.href) >= 0) {
+            $(this).parent().addClass('active'); // 
+        }
+    });  
+	//iCheck for checkbox and radio inputs
+	$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+	  checkboxClass: 'icheckbox_minimal-blue',
+	  radioClass: 'iradio_minimal-blue'
+	});
+ })
+</script>
+<script type="text/javascript">
+	//Model
+	var data = {
+	    rows: [],
+	    pagesize: 10,
+	    curpage:1,//当前页的页码
+       	rowtemplate: {
+           gid: 0,
+           gname: '',
+           description: '',
+           isable: '0'
+        }
+	};
+	var init = function(_self){
+		//还原模板
+	    _self.rowtemplate = {
+	   		gid: 0,
+	        gname: '',
+	        description: '',
+	        isable: ''
+	    };  
+	}
+	//ViewModel
+	var vue = new Vue({
+		el: '#app',
+		data: data,
+		methods: {
+			//从服务器读取数据
+			loadData: function(pageNum, pageSize){	
+				var _self = this;
+				$.ajax({
+	                url:"group/list",
+	                type:"post",
+	                success:function(res){
+	                	_self.rows=res.Groups;
+	                },
+	                error:function(e){
+	                   console.log("--------加载组信息列表失败---------");
+	                }
+	            });      				
+			},	
+		    Save: function (event) {
+		    	var _self = this;
+		        if (_self.rowtemplate.gid == 0) {
+		            //设置当前新增行的Id
+		            _self.rowtemplate.gid = _self.rows.length + 1;
+		            $.ajax({
+		                url:"group/save",
+		                type:"post",
+		                data:{
+		                	DESCRIPTION:_self.rowtemplate.description,
+		                	GID:_self.rowtemplate.gid,
+		                	GNAME:_self.rowtemplate.gname,
+		                	ISABLE:_self.rowtemplate.isabe
+		                },
+		                success:function(res){
+		                	_self.rows=res.Groups;
+		                },
+		                error:function(e){
+		                   console.log("--------添加组信息失败---------");
+		                }
+		            });
+		        }
+		        init(_self); 
+		    },
+		    Remove: function (gid,index) {
+		    	var _self = this;
+            	$.ajax({
+	                url:"group/remove",
+	                type:"post",
+	                data:{
+	                	gid:gid
+	                },
+	                success:function(res){
+	                	_self.rows.splice(index, 1);
+	                },
+	                error:function(e){
+	                   console.log("--------删除组信息失败---------");
+	                }
+	            });
+            	init(_self);
+		    },
+		    Enable: function (gid,index) {
+            	var _self = this;
+				$.ajax({
+	                url:"group/enable",
+	                type:"post",
+	                data:{
+		                  gid:gid	
+		            },
+	                success:function(res){
+	                	_self.rows=res.Groups;
+	                },
+	                error:function(e){
+	                   console.log("--------启用组信息失败---------");
+	                }
+	            });
+				init(_self);
+		    },
+		    Disable: function (gid,index) {
+            	var _self = this;
+				$.ajax({
+	                url:"group/disable",
+	                type:"post",
+	                data:{
+	                  gid:gid	
+	                },
+	                success:function(res){
+	                	_self.rows=res.Groups;
+	                },
+	                error:function(e){
+	                   console.log("--------禁用组信息失败---------");
+	                }
+	            });
+				init(_self);
+		    },
+		    Edit: function (row) {
+		        this.rowtemplate = row;
+		    },
+		    DoEdit: function(event){
+		    	var _self = this;
+				$.ajax({
+	                url:"group/edit",
+	                type:"post",
+	                data:{
+	                	DESCRIPTION:_self.rowtemplate.description,
+	                	GID:_self.rowtemplate.gid,
+	                	GNAME:_self.rowtemplate.gname,
+	                	ISABLE:_self.rowtemplate.isabe
+	                },
+	                success:function(res){
+	                	_self.rows=res.Groups;
+	                },
+	                error:function(e){
+	                   console.log("--------更新组信息失败---------");
+	                }
+	            });
+				init(_self);
+		    },
+		    //上一页方法
+		    PrePage: function (event) {
+		        $(".pagination .active").prev().trigger("click");
+		    },
+		    //下一页方法
+		    NextPage: function (event) {
+		        $(".pagination .active").next().trigger("click");
+		    },
+		    //点击页码的方法
+		    NumPage: function (num, event) {
+		        if (this.curpage == num) {
+		            return;
+		        }
+		        this.curpage = num;
+		        $(".pagination li").removeClass("active");
+		        if (event.target.tagName.toUpperCase() == "LI") {
+		            $(event.target).addClass("active");
+		        }
+		        else {
+		            $(event.target).parent().addClass("active");
+		        }
+		        if (this.curpage == 1) {
+		            $("#prepage").addClass("disabled");
+		        }
+		        else {
+		            $("#prepage").removeClass("disabled");
+		        }
+		        if (this.curpage == Math.ceil(this.rows.length / this.pagesize)) {
+		            $("#nextpage").addClass("disabled");
+		        }
+		        else {
+		            $("#nextpage").removeClass("disabled");
+		        }
+		    }
+		}
+	});
+	//载入数据
+	vue.loadData(vue.curpage,vue.pagesize);
+</script>
+</body>
+</html>

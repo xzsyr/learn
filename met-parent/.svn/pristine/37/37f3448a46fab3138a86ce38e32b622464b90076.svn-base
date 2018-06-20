@@ -1,0 +1,12 @@
+2018-06-06 08:25:47,434 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 08:25:47,436 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 08:25:47,437 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_HISJOB LIMIT 5 
+2018-06-06 08:25:47,438 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 08:25:47,439 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 08:25:47,439 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP where GID=? 
+2018-06-06 08:25:47,439 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 41(Integer)
+2018-06-06 08:25:47,440 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-06 08:25:47,440 INFO (HisJobController.java:51)- -------hisJobs:list---------
+2018-06-06 08:26:39,059 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-06 08:26:39,060 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-06 08:26:39,061 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

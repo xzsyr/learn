@@ -97,8 +97,7 @@ public class HdfsOverFtpServer {
 	 */
 	public static void startServer() throws Exception {
 
-		log.info(
-				"Starting Hdfs-Over-Ftp server. port: " + port + " data-ports: " + passivePorts + " hdfs-uri: " + hdfsUri);
+		log.info("Starting Hdfs-Over-Ftp server. port: " + port + " data-ports: " + passivePorts + " hdfs-uri: " + hdfsUri);
 
 		HdfsOverFtpSystem.setHDFS_URI(hdfsUri);
 
@@ -136,8 +135,7 @@ public class HdfsOverFtpServer {
 	 */
 	public static void startSSLServer() throws Exception {
 
-		log.info(
-				"Starting Hdfs-Over-Ftp SSL server. ssl-port: " + sslPort + " ssl-data-ports: " + sslPassivePorts + " hdfs-uri: " + hdfsUri);
+		log.info("Starting Hdfs-Over-Ftp SSL server. ssl-port: " + sslPort + " ssl-data-ports: " + sslPassivePorts + " hdfs-uri: " + hdfsUri);
 
 
 		HdfsOverFtpSystem.setHDFS_URI(hdfsUri);

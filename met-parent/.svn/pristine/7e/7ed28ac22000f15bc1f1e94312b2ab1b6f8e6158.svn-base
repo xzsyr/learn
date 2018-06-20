@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.example.demo.dao.GroupMapper">  
+    
+    <!--获取组信息列表-->
+    <select id="getGroups" resultType="com.example.demo.entity.Group">
+	   SELECT *FROM TB_GROUP
+    </select>
+    
+     <!--根据主键获取组信息-->
+    <select id="getGroupByKey" parameterType="java.lang.Integer" resultType="com.example.demo.dto.GroupDTO">
+	   SELECT *FROM TB_GROUP where GID=#{GID,jdbcType=INTEGER}
+    </select>
+   
+    <!--插入组信息-->
+   <insert id="insert" parameterType="com.example.demo.entity.Group">
+      insert into TB_GROUP(GNAME, DESCRIPTION,ISABLE) values(#{GNAME},#{DESCRIPTION},#{ISABLE})
+   </insert>
+  
+   <!--删除组信息-->
+   <delete id="delete" parameterType="java.lang.Integer">
+   	 delete from TB_GROUP where GID=#{GID,jdbcType=INTEGER}
+   </delete>
+   
+   <!--更新组信息-->
+   <update id="update"  parameterType="com.example.demo.entity.Group">
+	 UPDATE TB_GROUP
+	 <trim prefix="set" suffixOverrides=",">
+	  <if test="GNAME!=null">GNAME=#{GNAME},</if>
+	  <if test="DESCRIPTION!=null">DESCRIPTION=#{DESCRIPTION},</if>
+	  <if test="ISABLE!=null">ISABLE=#{ISABLE},</if>
+	 </trim>
+	 WHERE GID=#{GID}
+   </update>
+</mapper>

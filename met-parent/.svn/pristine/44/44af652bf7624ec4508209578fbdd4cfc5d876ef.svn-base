@@ -1,0 +1,12 @@
+2018-06-11 10:04:06,089 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:06,092 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:06 CST 2018
+2018-06-11 10:04:12,085 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:12,086 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:12 CST 2018
+2018-06-11 10:04:18,144 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:18,145 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:18 CST 2018
+2018-06-11 10:04:24,081 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:24,081 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:24 CST 2018
+2018-06-11 10:04:30,123 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:30,124 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:30 CST 2018
+2018-06-11 10:04:36,063 INFO (SingleJob.java:63)- ---hisjob:save ---操作成功!----
+2018-06-11 10:04:36,064 ERROR (SingleJob.java:38)- New Job执行时间: Mon Jun 11 10:04:36 CST 2018

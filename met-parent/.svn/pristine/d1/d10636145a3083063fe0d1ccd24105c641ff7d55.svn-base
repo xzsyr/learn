@@ -1,0 +1,13 @@
+2018-06-11 10:53:57,543 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_USER u LEFT JOIN TB_GROUP g ON u.GID = g.GID 
+2018-06-11 10:53:57,545 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:53:57,547 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:53:57,548 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT u.*,g.GNAME,g.DESCRIPTION FROM TB_USER u left join TB_GROUP g on u.GID=g.GID LIMIT 5 
+2018-06-11 10:53:57,549 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:53:57,552 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+2018-06-11 10:53:57,553 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM TB_GROUP 
+2018-06-11 10:53:57,553 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:53:57,555 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2018-06-11 10:53:57,555 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT *FROM TB_GROUP LIMIT 100 
+2018-06-11 10:53:57,555 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+2018-06-11 10:53:57,564 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 4
+2018-06-11 10:53:57,565 INFO (UserController.java:84)- -------user:listdto---------

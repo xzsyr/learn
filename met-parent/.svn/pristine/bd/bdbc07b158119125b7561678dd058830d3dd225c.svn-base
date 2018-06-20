@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.example.demo.dao.UserMapper">  
+    
+    <!--根据组GID加载用户信息-->
+    <select id="getUsersByGid" parameterType="java.lang.Integer" resultType="com.example.demo.entity.User">
+		 select *from TB_USER u where u.GID = #{GID,jdbcType=INTEGER}
+    </select>
+    
+    <!--根据组UID加载用户信息-->
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.example.demo.dto.UserDTO">
+		 select *from TB_USER u where u.UID = #{UID,jdbcType=INTEGER}
+    </select>
+    
+    <!--用户列表 -->
+    <select id="getUsers" resultType="com.example.demo.entity.User">
+    	 SELECT *FROM TB_USER
+    </select>
+      
+    <!--用户DTO列表 -->
+    <select id="getUserDTOs" resultType="com.example.demo.dto.UserDTO">
+    	 SELECT u.*,g.GNAME,g.DESCRIPTION FROM TB_USER u left join TB_GROUP g on u.GID=g.GID 
+    </select>
+    
+   <!--插入组信息-->
+   <insert id="insert" parameterType="com.example.demo.entity.User">
+      insert into TB_USER(UNAME,EMPNUM,ISABLE,GID) values(#{UNAME},#{EMPNUM},#{ISABLE},#{GID})
+   </insert>
+  
+   <!--删除组信息-->
+   <delete id="delete" parameterType="java.lang.Integer">
+   	 delete from TB_USER where UID=#{UID,jdbcType=INTEGER}
+   </delete>
+   
+   <!--更新组信息-->
+   <update id="update"  parameterType="com.example.demo.entity.User">
+	 UPDATE TB_USER
+	 <trim prefix="set" suffixOverrides=",">
+	  <if test="GID!=null">GID=#{GID},</if>
+	  <if test="UNAME!=null">UNAME=#{UNAME},</if>
+	  <if test="EMPNUM!=null">EMPNUM=#{EMPNUM},</if>
+	  <if test="ISABLE!=null">ISABLE=#{ISABLE},</if>
+	 </trim>
+	 WHERE UID=#{UID}
+   </update>
+</mapper>

@@ -1,0 +1,6 @@
+2018-06-11 11:13:31,096 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 0.874 seconds (JVM running for 210.119)
+2018-06-11 11:13:35,018 INFO (StartupInfoLogger.java:48)- Starting DemoApplication on Stronger-PC with PID 4660 (F:\Learn\met-parent\met-web\target\classes started by Stronger in F:\Learn\met-parent\met-web)
+2018-06-11 11:13:35,020 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-11 11:13:35,020 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-06-11 11:13:38,744 INFO (StartupInfoLogger.java:57)- Started DemoApplication in 4.072 seconds (JVM running for 4.408)
+2018-06-11 11:13:42,561 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM QRTZ_JOB_DETAILS JOIN QRTZ_TRIGGERS JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_NAME = QRTZ_TRIGGERS.JOB_NAME AND QRTZ_TRIGGERS.TRIGGER_NAME = QRTZ_CRON_TRIGGERS.TRIGGER_NAME AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP WHERE 1 = 1 
