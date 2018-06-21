@@ -12,6 +12,7 @@ import com.xzsyr.common.ResponseBean;
 import com.xzsyr.core.entity.UserInfo;
 import com.xzsyr.core.service.UserInfoService;
 import com.xzsyr.core.utils.JWTUtil;
+@SuppressWarnings("all")
 @RestController
 public class WebController {
 	@Autowired
