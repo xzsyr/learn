@@ -5,7 +5,7 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmployFallBack implements FallbackProvider{
+public class EmployServiceFallBack implements FallbackProvider{
 
 	@Override
 	public ClientHttpResponse fallbackResponse() {

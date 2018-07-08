@@ -40,7 +40,6 @@ import com.xzsyr.employ.service.EmployService;
  */
 @SuppressWarnings("all")
 @RestController
-@RequestMapping(value="/emp")
 public class EmployController {
 	
 	private static Logger log = LoggerFactory.getLogger(EmployController.class); 
@@ -109,14 +108,14 @@ public class EmployController {
 	 * @param empNm 雇主名称
 	 * @return     
 	 */
-	@RequestMapping(value="/getEmpByName/{empNm}",method=RequestMethod.GET)
-    public ResponseBean getEmpByName(@PathVariable("empNm") String empNm) {
-		log.info("-------emp:register---------");
-		return new ResponseBean(HttpStatus.OK.value(), "注册成功！", null);
+	@RequestMapping(value="/getEmpInfoByName/{empNm}",method=RequestMethod.GET)
+    public ResponseBean getEmpInfoByName(@PathVariable("empNm") String empNm) {
+		log.info("-------emp:getEmpInfoByName---------");
+		return new ResponseBean(HttpStatus.OK.value(), "okkkkkkk成功！", "####");
     }
 	
 	/**     
-	 * @discription 获取工匠名称
+	 * @discription 获取工匠名称@PathVariable("empid") String empid
 	 * @author jizhuang.wang       
 	 * @created 2018年4月28日 下午1:51:37     
 	 * @param name

@@ -61,11 +61,11 @@ zuul:
   prefix: /api
   routes:
     work:
-      path: /work/**
-      serviceId: craft-work-server
+      path: /admin/**
+      serviceId: craft-admin-server
     employ:
-      path: /employ/**
-      serviceId: craft-employ-server
+      path: /web/**
+      serviceId: craft-web-server
   retryable: true
   MaxAutoRetries: 2
   MaxAutoRetriesNextServer: 0
