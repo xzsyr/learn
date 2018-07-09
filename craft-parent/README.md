@@ -29,7 +29,6 @@ craft-parent是一个大型分布式、微服务、面向企业的JavaEE体系�
 
 - <del>前端框架：Bootstrap、Vue</del>
 
-
 ##.   设计思想
 
 分布式、微服务、云架构
