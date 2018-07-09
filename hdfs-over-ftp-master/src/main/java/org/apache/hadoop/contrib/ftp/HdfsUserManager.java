@@ -344,8 +344,7 @@ public class HdfsUserManager extends AbstractUserManager {
 		user.setGroups(parseGroups(userDataProp
 				.getProperty(baseKey + "groups")));
 		
-		user.setScanDir(parseScanDir(userDataProp
-				.getProperty(baseKey + "scandir")));
+		user.setScanDir(parseScanDir(userDataProp.getProperty(baseKey + "scandir")));
 
 		List<Authority> authorities = new ArrayList<Authority>();
 

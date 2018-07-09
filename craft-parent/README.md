@@ -29,6 +29,7 @@ craft-parent是一个大型分布式、微服务、面向企业的JavaEE体系�
 
 - <del>前端框架：Bootstrap、Vue</del>
 
+
 ##.   设计思想
 
 分布式、微服务、云架构
@@ -96,3 +97,13 @@ JAVA语言开发、跨平台、高性能、高可用、安全、服务化、模�
 ##.    源码结构
      
 ##.    部署说明
+###1、下载源码
+https://github.com/xzsyr/learn/tree/master/craft-parent
+###2、  修改域名host文件 
+ <p> C:\Windows\System32\drivers\etc<br>
+    新增配置项
+  127.0.0.1       peer1 peer2 </p>
+  
+###3、 运行启动
+EurekaServerApplication Run as 'Java Application'#启动注册中心服务器<br>
+EurekaServerHaApplication Run as 'Java Application'#启动注册中心服务器standy

@@ -1,6 +1,13 @@
 package com.xzsyr.common;
 
-public class ResponseBean<T> {
+import java.io.Serializable;
+
+public class ResponseBean<T> implements Serializable{
+	/**  
+	* @Fields field:field:{todo}
+	*/
+	private static final long serialVersionUID = 986889085627113130L;
+
 	// http 状态码
     private int code;
 
@@ -39,5 +46,13 @@ public class ResponseBean<T> {
     public void setData(T data) {
         this.data = data;
     }
+
+	/**  
+	* 创建一个新的实例 ResponseBean.  
+	*    
+	*/ 
+	public ResponseBean() {
+		super();
+	}
 
 }

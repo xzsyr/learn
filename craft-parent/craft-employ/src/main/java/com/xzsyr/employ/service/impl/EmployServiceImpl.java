@@ -9,6 +9,8 @@
 
 package com.xzsyr.employ.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageInfo;
 import com.xzsyr.employ.dto.EmployDTO;
 import com.xzsyr.employ.entity.EmployInfo;
@@ -20,7 +22,7 @@ import com.xzsyr.employ.service.EmployService;
  * @author jizhuang.wang       
  * @created 2018年4月28日 下午1:58:12    
  */
-
+@Service
 public class EmployServiceImpl implements EmployService{
 
 	@Override

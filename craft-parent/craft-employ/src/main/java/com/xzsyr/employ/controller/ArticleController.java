@@ -29,12 +29,12 @@ import com.xzsyr.employ.service.EmployService;
 @RequestMapping(value="/article")
 public class ArticleController {
 	private static Logger log = LoggerFactory.getLogger(EmployController.class); 
-	@Autowired
+	/*@Autowired
     private ArticleService articleService;
 	
 	public ResponseBean<ArticleInfo> list(@RequestBody ArticleDTO articleDto, @RequestParam(value="pageNum") int pageNum, 
             @RequestParam(value="pageSize") int pageSize){
 		ResponseBean<ArticleInfo> articles = articleService.pages(articleDto,pageNum, pageSize);
 		return articles;
-	}
+	}*/
 }

@@ -16,9 +16,9 @@ spring:
           filters: stat
           driver-class-name: com.mysql.jdbc.Driver
           #基本属性
-          url: jdbc:mysql://192.168.0.189:3306/craft_employ?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=false
+          url: jdbc:mysql://192.168.1.5:3306/craft?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=false
           username: root
-          password: 898
+          password: 123456
           #配置初始化大小/最小/最大
           initial-size: 1
           min-idle: 1

@@ -110,10 +110,9 @@ public class HdfsOverFtpServer {
 
         //用户信息管理
 		HdfsUserManager userManager = new HdfsUserManager();
-		DbUserManager dbUserManager=new DbUserManager();
 		final File file = loadResource("/users.properties");
 		userManager.setFile(file);
-		server.setUserManager(dbUserManager);
+		server.setUserManager(userManager);
 
 		server.setFileSystem(new HdfsFileSystemManager());
 

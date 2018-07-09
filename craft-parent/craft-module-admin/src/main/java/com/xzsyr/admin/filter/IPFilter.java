@@ -29,7 +29,7 @@ public class IPFilter extends ZuulFilter{
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return false;
     }
 
     @Override
@@ -43,6 +43,7 @@ public class IPFilter extends ZuulFilter{
         ips.add("0:0:0:0:0:0:0:1");
         ips.add("127.0.0.1");
         ips.add("192.168.8.94");
+        ips.add("192.168.1.5");
         if(!ips.contains(ipAddr)){
             logger.info("IP地址校验不通过！！！");
             ctx.setResponseStatusCode(401);

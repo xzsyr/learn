@@ -8,7 +8,6 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>craft-module-worker</artifactId>
-  <packaging>war</packaging>
   <name>craft-module-worker Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
