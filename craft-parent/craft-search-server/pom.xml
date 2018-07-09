@@ -7,9 +7,12 @@
     <artifactId>craft-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>craft-module-voice</artifactId>
-  <name>craft-module-voice Maven Webapp</name>
+  <artifactId>craft-search-server</artifactId>
+  <name>craft-search-server</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <dependencies>
     <dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -32,8 +35,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+        <!-- elasticsearch -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+         <!-- common模块 -->
+        <dependency>
+	        <groupId>com.xzsyr</groupId>
+	        <artifactId>craft-module-common</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+        </dependency>
   </dependencies>
-  <build>
-    <finalName>craft-module-voice</finalName>
-  </build>
 </project>

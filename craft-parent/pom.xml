@@ -72,5 +72,6 @@
     <!-- 网关服务 -->
     <module>craft-admin-gateway</module>
     <module>craft-web-gateway</module>
+    <module>craft-search-server</module>
   </modules>
 </project>

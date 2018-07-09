@@ -71,6 +71,7 @@ JAVA语言开发、跨平台、高性能、高可用、安全、服务化、模�
 - **craft-config-server 配置中心服务**
 - **craft-zuul-server  网管路由服务**
 - **craft-zipkin-server 链路追踪服务**
+
 - craft-mq-server 消息服务
 - craft-search-server 搜索服务*
 - craft-dfs-server  文件服务
@@ -97,6 +98,7 @@ JAVA语言开发、跨平台、高性能、高可用、安全、服务化、模�
 ##.    源码结构
      
 ##.    部署说明
+
 ###1、下载源码
 https://github.com/xzsyr/learn/tree/master/craft-parent
 ###2、  修改域名host文件 
@@ -107,3 +109,7 @@ https://github.com/xzsyr/learn/tree/master/craft-parent
 ###3、 运行启动
 EurekaServerApplication Run as 'Java Application'#启动注册中心服务器<br>
 EurekaServerHaApplication Run as 'Java Application'#启动注册中心服务器standy
+
+##.    其他
+<p>全部服务使用swagger2构建强大的RESTful API文档</br>
+参考文档：http://blog.didispace.com/springbootswagger2</p>
