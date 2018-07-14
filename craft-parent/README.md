@@ -103,7 +103,7 @@ https://github.com/xzsyr/learn/tree/master/craft-parent
 ###2、  修改域名host文件 
  <p> C:\Windows\System32\drivers\etc<br>
     新增配置项
-  127.0.0.1       peer1 peer2 </p>
+  127.0.0.1或IP     peer1 peer2 </p>
   
 ###3、 运行启动
 EurekaServerApplication Run as 'Java Application'#启动注册中心服务器<br>
